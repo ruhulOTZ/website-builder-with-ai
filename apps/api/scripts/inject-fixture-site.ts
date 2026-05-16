@@ -91,8 +91,18 @@ const RAW_FORGE_SITE = {
             headline: 'The bar does not lie.',
             subheadline:
               'A private platform floor for serious lifters. Real coaching, real loads, real numbers.',
-            primaryCta: { label: 'Book a trial session', href: '#trial', style: 'primary', external: false },
-            secondaryCta: { label: 'See programs', href: '#programs', style: 'secondary', external: false },
+            primaryCta: {
+              label: 'Book a trial session',
+              href: '#trial',
+              style: 'primary',
+              external: false,
+            },
+            secondaryCta: {
+              label: 'See programs',
+              href: '#programs',
+              style: 'secondary',
+              external: false,
+            },
             media: {
               kind: 'image',
               image: {

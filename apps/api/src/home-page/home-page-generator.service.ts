@@ -22,6 +22,7 @@ import {
   HomePageGenerationSchema,
   type HomePageGenerationOutput,
 } from './generation-schemas/home-page-v1';
+import { resolveImageRefs } from './image-resolution';
 import { buildHomePagePrompt, PROMPT_VERSION } from './prompts/home-page-v1';
 
 const MODEL = 'gemini-2.5-flash';
@@ -152,8 +153,15 @@ export class HomePageGeneratorService {
     // and the eval rig tags it `phase: 'post-injection-validation'`.
     const validated: Site = SiteSchema.parse(siteInput);
 
+    // Post-AI enrichment: populate ImageRef.url from query strings via
+    // Unsplash Source API. Pure function — no network call at this point;
+    // the URL is a redirect that resolves at render time in the browser.
+    // Runs after SiteSchema.parse so all fields are typed; no re-validation
+    // needed (we only add strings to existing optional url fields).
+    const withImages: Site = resolveImageRefs(validated);
+
     return {
-      site: normalizeStrings(validated),
+      site: normalizeStrings(withImages),
       modelUsed: MODEL,
       promptVersion: PROMPT_VERSION,
     };

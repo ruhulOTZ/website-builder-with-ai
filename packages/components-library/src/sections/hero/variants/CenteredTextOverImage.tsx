@@ -16,7 +16,10 @@ export function CenteredTextOverImage({
     <section className="bg-background relative isolate overflow-hidden">
       {image ? (
         <div className="absolute inset-0 -z-10">
-          <Image image={image} className="h-full w-full" />
+          {/* Only render the image when a URL is resolved — the Image component's
+              text placeholder would bleed through the multiply scrim and appear as
+              a second paragraph of text overlapping the foreground subheadline. */}
+          {image.url ? <Image image={image} className="h-full w-full" /> : null}
           {/* Foreground-tinted scrim — uses theme foreground so light themes
               get a dark wash and dark themes get the opposite. */}
           <div

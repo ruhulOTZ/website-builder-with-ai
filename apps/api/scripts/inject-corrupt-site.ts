@@ -17,7 +17,9 @@ async function main(): Promise<void> {
     });
     console.log('\nInserted corrupt GeneratedSiteRecord.');
     console.log(`  id: ${record.id}`);
-    console.log(`\nRender URL (expect schema error UI): http://localhost:3000/render/${record.id}\n`);
+    console.log(
+      `\nRender URL (expect schema error UI): http://localhost:3000/render/${record.id}\n`,
+    );
   } finally {
     await prisma.$disconnect();
   }
