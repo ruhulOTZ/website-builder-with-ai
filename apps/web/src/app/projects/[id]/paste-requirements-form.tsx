@@ -54,7 +54,7 @@ export function PasteRequirementsForm({ projectId, initialValue }: Props) {
         }}
         placeholder="Paste a description of the business here."
         rows={24}
-        className="min-h-[500px] font-mono text-sm"
+        className="min-h-[500px] text-sm"
         disabled={submitting}
       />
       <div className="text-muted-foreground flex items-center justify-between text-xs">

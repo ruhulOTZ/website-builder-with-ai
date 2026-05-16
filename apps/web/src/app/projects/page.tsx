@@ -1,4 +1,5 @@
 import { prisma } from '@repo/database';
+import { Sparkles } from 'lucide-react';
 import Link from 'next/link';
 
 import { Badge } from '@/components/ui/badge';
@@ -49,14 +50,19 @@ export default async function ProjectsPage() {
       </header>
 
       {projects.length === 0 ? (
-        <Card className="mx-auto max-w-md">
-          <CardHeader>
-            <CardTitle>No projects yet</CardTitle>
+        <Card className="mx-auto max-w-lg">
+          <CardHeader className="items-center text-center">
+            <Sparkles className="text-muted-foreground mb-3 size-8" aria-hidden="true" />
+            <CardTitle>Start a new project</CardTitle>
           </CardHeader>
-          <CardContent className="text-muted-foreground space-y-4 text-sm">
-            <p>Create your first project to get started.</p>
+          <CardContent className="text-muted-foreground space-y-5 text-center text-sm">
+            <p>
+              Paste a business description — a gym, a clinic, a bakery, anything — and we&apos;ll
+              generate a complete website concept: profile, brand archetype, color palette,
+              typography, and page architecture.
+            </p>
             <Button asChild>
-              <Link href="/projects/new">Create a project</Link>
+              <Link href="/projects/new">Create your first project</Link>
             </Button>
           </CardContent>
         </Card>

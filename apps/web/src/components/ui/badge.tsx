@@ -15,6 +15,11 @@ const badgeVariants = cva(
         destructive:
           'border-transparent bg-destructive text-white [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60',
         outline: 'text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground',
+        // Green-tinted variant for "done"-state markers (e.g. COMPLETED in
+        // the project status ladder). Uses Tailwind emerald to read distinctly
+        // from the default primary variant in light + dark mode.
+        success:
+          'border-transparent bg-emerald-600 text-white [a&]:hover:bg-emerald-600/90 dark:bg-emerald-700',
       },
     },
     defaultVariants: {

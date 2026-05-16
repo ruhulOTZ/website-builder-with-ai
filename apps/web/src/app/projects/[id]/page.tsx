@@ -9,6 +9,7 @@ import { GenerateProfileButton } from './generate-profile-button';
 import { PasteRequirementsForm } from './paste-requirements-form';
 import { ProfileForm } from './profile-form';
 import { ProfileSummary } from './profile-summary';
+import { DeleteProjectButton, RenameProjectButton } from './project-actions';
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -56,7 +57,10 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         </Link>
       </div>
       <header className="mb-10 flex items-start justify-between gap-4">
-        <h1 className="text-3xl font-semibold tracking-tight">{project.name}</h1>
+        <div className="flex items-center gap-3">
+          <h1 className="text-3xl font-semibold tracking-tight">{project.name}</h1>
+          <RenameProjectButton projectId={project.id} currentName={project.name} />
+        </div>
         <Badge variant={STATUS_VARIANT[project.status]} className="mt-2 shrink-0">
           {STATUS_LABEL[project.status]}
         </Badge>
@@ -202,6 +206,10 @@ export default async function ProjectDetailPage({ params }: PageProps) {
           </CardContent>
         </Card>
       )}
+
+      <footer className="mt-12 flex justify-end border-t pt-6">
+        <DeleteProjectButton projectId={project.id} projectName={project.name} />
+      </footer>
     </main>
   );
 }

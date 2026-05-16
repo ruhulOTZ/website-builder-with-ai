@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@repo/config": "workspace:*",
+    "eslint": "^9.39.4",
     "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "playwright": "^1.60.0",

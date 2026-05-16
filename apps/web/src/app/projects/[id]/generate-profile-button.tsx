@@ -2,7 +2,7 @@
 
 import { Loader2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { toast } from 'sonner';
 
 import { Button } from '@/components/ui/button';
@@ -14,12 +14,9 @@ interface Props {
   label?: string;
 }
 
-const PROGRESS_LABELS = [
-  'Reading your requirements…',
-  'Extracting business details…',
-  'Validating the result…',
-];
-
+// Single static loading message — no progressive labels. The underlying
+// request is one POST; cycling labels lies about progress, which hurts more
+// than it helps. Matches the brief button's pattern (2.4d retrospective).
 export function GenerateProfileButton({
   projectId,
   regenerate = false,
@@ -27,23 +24,9 @@ export function GenerateProfileButton({
 }: Props) {
   const router = useRouter();
   const [submitting, setSubmitting] = useState(false);
-  const [progressIdx, setProgressIdx] = useState(0);
-
-  // Cycle the progress label every ~2.5s while submitting so 5–7s of waiting
-  // doesn't feel like the request hung. Pure cosmetic — no real progress.
-  useEffect(() => {
-    if (!submitting) return;
-    const interval = setInterval(() => {
-      setProgressIdx((idx) => Math.min(idx + 1, PROGRESS_LABELS.length - 1));
-    }, 2500);
-    return () => {
-      clearInterval(interval);
-    };
-  }, [submitting]);
 
   async function run(): Promise<void> {
     setSubmitting(true);
-    setProgressIdx(0);
     try {
       const res = await fetch(`/api/projects/${projectId}/parse`, { method: 'POST' });
       if (!res.ok) {
@@ -65,7 +48,7 @@ export function GenerateProfileButton({
     return (
       <Button disabled className="gap-2">
         <Loader2 className="size-4 animate-spin" />
-        {PROGRESS_LABELS[progressIdx]}
+        Generating profile…
       </Button>
     );
   }

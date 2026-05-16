@@ -23,6 +23,22 @@ export async function GET(_request: Request, context: RouteContext): Promise<Nex
   return NextResponse.json({ project });
 }
 
+// DELETE /api/projects/[id] — hard delete, owner-scoped. 404 when not
+// found (matches the ownership check pattern of GET/PATCH).
+export async function DELETE(_request: Request, context: RouteContext): Promise<NextResponse> {
+  const { userId } = requireUserId();
+  const { id } = await context.params;
+
+  // deleteMany returns count instead of throwing if the row doesn't
+  // match the where clause — gives us the 404 vs success branch
+  // without a separate findFirst round-trip.
+  const result = await prisma.project.deleteMany({ where: { id, userId } });
+  if (result.count === 0) {
+    return NextResponse.json({ error: 'Not found' }, { status: 404 });
+  }
+  return NextResponse.json({ ok: true });
+}
+
 // PATCH /api/projects/[id] — update name and/or rawRequirements.
 // When rawRequirements is provided, status advances to REQUIREMENTS_SUBMITTED.
 export async function PATCH(request: Request, context: RouteContext): Promise<NextResponse> {

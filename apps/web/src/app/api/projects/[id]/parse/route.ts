@@ -178,16 +178,15 @@ export async function POST(_request: Request, context: RouteContext): Promise<Ne
     );
   }
 
-  // Persist. Status only advances forward — never resets a confirmed profile
-  // back to GENERATED on an accidental re-parse mid-flow.
-  const nextStatus =
-    project.status === 'PROFILE_CONFIRMED' ? 'PROFILE_CONFIRMED' : 'PROFILE_GENERATED';
+  // Regenerate always returns the project to PROFILE_GENERATED, regardless
+  // of prior status. Confirmation is a property of specific content; new
+  // content needs re-confirmation. Mirrors the brief proxy's pattern.
   await prisma.project.update({
     where: { id: project.id },
     data: {
       businessProfileId: validated.data.id ?? null,
       businessProfileJson: validated.data.profile,
-      status: nextStatus,
+      status: 'PROFILE_GENERATED',
     },
   });
 

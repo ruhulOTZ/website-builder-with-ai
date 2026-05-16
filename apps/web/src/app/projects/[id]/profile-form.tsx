@@ -21,6 +21,7 @@ import {
   AlertDialogTrigger,
 } from '@/components/ui/alert-dialog';
 import { Button } from '@/components/ui/button';
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import {
   Form,
   FormControl,
@@ -155,7 +156,6 @@ function toSubmit(v: FormValues): BusinessProfile {
 export function ProfileForm({ projectId, initialProfile, status }: Props) {
   const router = useRouter();
   const [saving, setSaving] = useState<'save' | 'confirm' | 'regenerate' | null>(null);
-  const [collapsed, setCollapsed] = useState({ location: true, contact: true });
 
   const form = useForm<FormValues>({
     resolver: zodResolver(FormShape),
@@ -555,23 +555,20 @@ export function ProfileForm({ projectId, initialProfile, status }: Props) {
         <Separator />
 
         {/* --- Location (collapsible) --- */}
-        <section className="space-y-4">
-          <button
-            type="button"
-            onClick={() => {
-              setCollapsed((c) => ({ ...c, location: !c.location }));
-            }}
-            className="flex w-full items-center justify-between text-left"
-          >
-            <h3 className="text-muted-foreground text-sm font-semibold uppercase tracking-wide">
-              Location
-            </h3>
-            <span className="text-muted-foreground text-xs">
-              {collapsed.location ? 'Expand' : 'Collapse'}
-            </span>
-          </button>
-          {!collapsed.location && (
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <Collapsible asChild>
+          <section className="space-y-4">
+            <CollapsibleTrigger className="group flex w-full items-center justify-between text-left">
+              <h3 className="text-muted-foreground text-sm font-semibold uppercase tracking-wide">
+                Location
+              </h3>
+              <span className="text-muted-foreground text-xs group-data-[state=open]:hidden">
+                Expand
+              </span>
+              <span className="text-muted-foreground text-xs group-data-[state=closed]:hidden">
+                Collapse
+              </span>
+            </CollapsibleTrigger>
+            <CollapsibleContent className="grid grid-cols-1 gap-4 sm:grid-cols-3">
               <FormField
                 control={form.control}
                 name="location.city"
@@ -624,30 +621,27 @@ export function ProfileForm({ projectId, initialProfile, status }: Props) {
                   </FormItem>
                 )}
               />
-            </div>
-          )}
-        </section>
+            </CollapsibleContent>
+          </section>
+        </Collapsible>
 
         <Separator />
 
         {/* --- Contact (collapsible) --- */}
-        <section className="space-y-4">
-          <button
-            type="button"
-            onClick={() => {
-              setCollapsed((c) => ({ ...c, contact: !c.contact }));
-            }}
-            className="flex w-full items-center justify-between text-left"
-          >
-            <h3 className="text-muted-foreground text-sm font-semibold uppercase tracking-wide">
-              Contact
-            </h3>
-            <span className="text-muted-foreground text-xs">
-              {collapsed.contact ? 'Expand' : 'Collapse'}
-            </span>
-          </button>
-          {!collapsed.contact && (
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <Collapsible asChild>
+          <section className="space-y-4">
+            <CollapsibleTrigger className="group flex w-full items-center justify-between text-left">
+              <h3 className="text-muted-foreground text-sm font-semibold uppercase tracking-wide">
+                Contact
+              </h3>
+              <span className="text-muted-foreground text-xs group-data-[state=open]:hidden">
+                Expand
+              </span>
+              <span className="text-muted-foreground text-xs group-data-[state=closed]:hidden">
+                Collapse
+              </span>
+            </CollapsibleTrigger>
+            <CollapsibleContent className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <FormField
                 control={form.control}
                 name="contact.email"
@@ -684,9 +678,9 @@ export function ProfileForm({ projectId, initialProfile, status }: Props) {
                   </FormItem>
                 )}
               />
-            </div>
-          )}
-        </section>
+            </CollapsibleContent>
+          </section>
+        </Collapsible>
 
         <Separator />
 
@@ -717,6 +711,10 @@ export function ProfileForm({ projectId, initialProfile, status }: Props) {
                 <AlertDialogCancel>Cancel</AlertDialogCancel>
                 <AlertDialogAction
                   onClick={() => {
+                    // Set spinner state synchronously before the dialog
+                    // starts its close animation — eliminates the unmount-
+                    // vs-mount flash on fast networks.
+                    setSaving('regenerate');
                     void onRegenerate();
                   }}
                 >

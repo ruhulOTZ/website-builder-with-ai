@@ -14,14 +14,17 @@ export const STATUS_LABEL: Record<ProjectStatus, string> = {
   COMPLETED: 'Completed',
 };
 
-export type BadgeVariant = 'default' | 'secondary' | 'outline' | 'destructive';
+export type BadgeVariant = 'default' | 'secondary' | 'outline' | 'destructive' | 'success';
 
+// Intentional visual progression: faint outline (nothing yet) → secondary
+// (in-flight) → default (confirmed milestone reached) → success (project
+// shipped). The user should sense "how far along" without reading the label.
 export const STATUS_VARIANT: Record<ProjectStatus, BadgeVariant> = {
   DRAFT: 'outline',
   REQUIREMENTS_SUBMITTED: 'secondary',
   PROFILE_GENERATED: 'secondary',
   PROFILE_CONFIRMED: 'default',
-  BRIEF_GENERATED: 'secondary',
+  BRIEF_GENERATED: 'default',
   BRIEF_CONFIRMED: 'default',
-  COMPLETED: 'default',
+  COMPLETED: 'success',
 };

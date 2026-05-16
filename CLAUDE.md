@@ -214,7 +214,7 @@ pnpm --filter @repo/database prisma studio
 - [x] Phase 2.4a: Project list + new-project flow + paste-requirements form (dev-auth stub; Clerk wired in 2.5).
 - [x] Phase 2.4b: Parse-requirements integration; profile inspection/edit UI with classified error states.
 - [x] Phase 2.4c: Generate-brief integration with brief inspection/edit UI (archetype badge, trait dots, OKLCH swatches, recommendedPages via useFieldArray).
-- [ ] Phase 2.4d: Polish, error states, resume-in-progress flow
+- [x] Phase 2.4d: Polish — parse proxy regenerate symmetric with brief, single loading messages, prose textarea, Radix Collapsible for accessibility, project rename/delete, "Clear" affordance on optional Selects, next/font-loaded typography preview, status badge ladder with success variant, AlertDialog spinner-flash fix, empty-state copy. Resume-in-progress verified.
 - [ ] Phase 2.5: Clerk auth on protected endpoints
 
 ## Out of Scope (For Now)

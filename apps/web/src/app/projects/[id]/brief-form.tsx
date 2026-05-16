@@ -1,7 +1,7 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
-import { TYPOGRAPHY_PAIRINGS } from '@repo/design-system';
+import { TYPOGRAPHY_PAIRINGS, getFontsForPairing } from '@repo/design-system';
 import { DesignBriefSchema, type DesignBrief } from '@repo/shared-types';
 import { Loader2, X } from 'lucide-react';
 import { useRouter } from 'next/navigation';
@@ -394,15 +394,19 @@ export function BriefForm({ projectId, initialBrief, status }: Props) {
   const isConfirmed = status === 'BRIEF_CONFIRMED';
   const isSaving = saving !== null;
 
-  // Typography preview uses the design-system's actual fontFamily strings.
-  // Without a `<link>` tag for the Google Fonts the browser falls back to
-  // the system sans/serif — the *name* renders accurately and the visual
-  // hint is "this pairing reads serif" / "this pairing reads sans." 2.4d
-  // polish can wire next/font for accurate previews.
-  const typographyConfig =
-    currentTypography in TYPOGRAPHY_PAIRINGS
-      ? TYPOGRAPHY_PAIRINGS[currentTypography as keyof typeof TYPOGRAPHY_PAIRINGS]
-      : null;
+  // Typography preview uses the design-system's getFontsForPairing() so the
+  // font-family resolves to `var(--font-*)` references — next/font has the
+  // actual @font-face under those variables. The fonts themselves are loaded
+  // at the root layout via getAllFontVariables(). The preview renders in the
+  // chosen pairing's actual fonts (Bebas Neue, Fraunces, etc.), not a fallback.
+  type Pairing = keyof typeof TYPOGRAPHY_PAIRINGS;
+  const isValidPairing = (v: string): v is Pairing => v in TYPOGRAPHY_PAIRINGS;
+  const typographyConfig = isValidPairing(currentTypography)
+    ? TYPOGRAPHY_PAIRINGS[currentTypography]
+    : null;
+  const typographyFonts = isValidPairing(currentTypography)
+    ? getFontsForPairing(currentTypography)
+    : null;
 
   return (
     <Form {...form}>
@@ -637,16 +641,16 @@ export function BriefForm({ projectId, initialBrief, status }: Props) {
               </FormItem>
             )}
           />
-          {typographyConfig !== null && (
+          {typographyConfig !== null && typographyFonts !== null && (
             <div className="bg-muted/30 rounded-md border p-5">
-              <div className="text-3xl" style={{ fontFamily: typographyConfig.headingFamily }}>
-                Iron Halo. No fluff.
+              <div className="text-3xl" style={{ fontFamily: typographyFonts.cssFamilies.heading }}>
+                The brief in action.
               </div>
               <div
                 className="text-muted-foreground mt-2 text-sm"
-                style={{ fontFamily: typographyConfig.bodyFamily }}
+                style={{ fontFamily: typographyFonts.cssFamilies.body }}
               >
-                Serious lifting, serious coaching, serious equipment. Heading:{' '}
+                Body copy renders in the chosen pairing&apos;s body font. Heading:{' '}
                 {typographyConfig.googleFonts[0] ?? '—'} · Body:{' '}
                 {typographyConfig.googleFonts[1] ?? typographyConfig.googleFonts[0] ?? '—'}.
               </div>
@@ -954,7 +958,9 @@ export function BriefForm({ projectId, initialBrief, status }: Props) {
           <h3 className="text-muted-foreground text-sm font-semibold uppercase tracking-wide">
             Component preferences
           </h3>
-          <FormDescription>Soft hints for downstream stages. Leave blank to omit.</FormDescription>
+          <FormDescription>
+            Soft hints for downstream stages. Use Clear to remove a hint.
+          </FormDescription>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             <FormField
               control={form.control}
@@ -962,21 +968,36 @@ export function BriefForm({ projectId, initialBrief, status }: Props) {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className="text-xs">Hero variant</FormLabel>
-                  <Select value={field.value} onValueChange={field.onChange} disabled={isSaving}>
-                    <FormControl>
-                      <SelectTrigger className="w-full">
-                        <SelectValue placeholder="(none)" />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      <SelectItem value=" ">(none)</SelectItem>
-                      {HERO_VARIANT_OPTIONS.map((o) => (
-                        <SelectItem key={o.value} value={o.value}>
-                          {o.label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                  <div className="flex items-center gap-2">
+                    <Select value={field.value} onValueChange={field.onChange} disabled={isSaving}>
+                      <FormControl>
+                        <SelectTrigger className="w-full">
+                          <SelectValue placeholder="(none)" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        {HERO_VARIANT_OPTIONS.map((o) => (
+                          <SelectItem key={o.value} value={o.value}>
+                            {o.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    {field.value !== '' ? (
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => {
+                          field.onChange('');
+                        }}
+                        disabled={isSaving}
+                        aria-label="Clear hero variant"
+                      >
+                        Clear
+                      </Button>
+                    ) : null}
+                  </div>
                 </FormItem>
               )}
             />
@@ -986,21 +1007,36 @@ export function BriefForm({ projectId, initialBrief, status }: Props) {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className="text-xs">Card style</FormLabel>
-                  <Select value={field.value} onValueChange={field.onChange} disabled={isSaving}>
-                    <FormControl>
-                      <SelectTrigger className="w-full">
-                        <SelectValue placeholder="(none)" />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      <SelectItem value=" ">(none)</SelectItem>
-                      {CARD_STYLE_OPTIONS.map((o) => (
-                        <SelectItem key={o.value} value={o.value}>
-                          {o.label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                  <div className="flex items-center gap-2">
+                    <Select value={field.value} onValueChange={field.onChange} disabled={isSaving}>
+                      <FormControl>
+                        <SelectTrigger className="w-full">
+                          <SelectValue placeholder="(none)" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        {CARD_STYLE_OPTIONS.map((o) => (
+                          <SelectItem key={o.value} value={o.value}>
+                            {o.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    {field.value !== '' ? (
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => {
+                          field.onChange('');
+                        }}
+                        disabled={isSaving}
+                        aria-label="Clear card style"
+                      >
+                        Clear
+                      </Button>
+                    ) : null}
+                  </div>
                 </FormItem>
               )}
             />
@@ -1010,21 +1046,36 @@ export function BriefForm({ projectId, initialBrief, status }: Props) {
               render={({ field }) => (
                 <FormItem>
                   <FormLabel className="text-xs">Button style</FormLabel>
-                  <Select value={field.value} onValueChange={field.onChange} disabled={isSaving}>
-                    <FormControl>
-                      <SelectTrigger className="w-full">
-                        <SelectValue placeholder="(none)" />
-                      </SelectTrigger>
-                    </FormControl>
-                    <SelectContent>
-                      <SelectItem value=" ">(none)</SelectItem>
-                      {BUTTON_STYLE_OPTIONS.map((o) => (
-                        <SelectItem key={o.value} value={o.value}>
-                          {o.label}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
+                  <div className="flex items-center gap-2">
+                    <Select value={field.value} onValueChange={field.onChange} disabled={isSaving}>
+                      <FormControl>
+                        <SelectTrigger className="w-full">
+                          <SelectValue placeholder="(none)" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent>
+                        {BUTTON_STYLE_OPTIONS.map((o) => (
+                          <SelectItem key={o.value} value={o.value}>
+                            {o.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    {field.value !== '' ? (
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => {
+                          field.onChange('');
+                        }}
+                        disabled={isSaving}
+                        aria-label="Clear button style"
+                      >
+                        Clear
+                      </Button>
+                    ) : null}
+                  </div>
                 </FormItem>
               )}
             />
@@ -1171,6 +1222,10 @@ export function BriefForm({ projectId, initialBrief, status }: Props) {
                 <AlertDialogCancel>Cancel</AlertDialogCancel>
                 <AlertDialogAction
                   onClick={() => {
+                    // Set spinner state synchronously before the dialog
+                    // starts its close animation — eliminates the unmount-
+                    // vs-mount flash on fast networks.
+                    setSaving('regenerate');
                     void onRegenerate();
                   }}
                 >
