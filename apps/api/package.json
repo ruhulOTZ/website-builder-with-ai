@@ -18,6 +18,7 @@
     "eval:cache:verify:brief": "ts-node --transpile-only --project tsconfig.build.json scripts/verify-brief-cache-key.ts",
     "eval:cache:verify:home-page": "ts-node --transpile-only --project tsconfig.build.json scripts/verify-home-page-cache-key.ts",
     "verify:brief-to-theme": "ts-node --transpile-only --project tsconfig.build.json scripts/verify-brief-to-theme.ts",
+    "verify:generation-roundtrip": "ts-node --transpile-only --project tsconfig.build.json scripts/verify-generation-roundtrip.ts",
     "diagnose:truncation": "ts-node --transpile-only --project tsconfig.build.json scripts/diagnose-truncation.ts",
     "smoke:brief": "ts-node --transpile-only --project tsconfig.build.json scripts/smoke-brief.ts",
     "smoke:home-page": "ts-node --transpile-only --project tsconfig.build.json scripts/smoke-home-page.ts"

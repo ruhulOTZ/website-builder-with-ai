@@ -117,7 +117,14 @@ export class HomePageGeneratorService {
             external: false,
           }));
 
-    const site: Site = {
+    // The site object is typed as `unknown` here because the narrow
+    // HomePageGenerationOutput's Page is a strict subset of the canonical
+    // Page (it omits seo.noIndex, ogImage, canonicalPath, themeOverride,
+    // and other fields with canonical defaults). SiteSchema.parse below
+    // applies those defaults during parsing, so the validated result is a
+    // canonical `Site`. Going through `unknown` avoids fighting the type
+    // checker over fields the parser will set.
+    const siteInput: unknown = {
       schemaVersion: 1,
       id: `site_${randomUUID()}`,
       designBriefId: input.designBriefId,
@@ -139,10 +146,11 @@ export class HomePageGeneratorService {
     };
 
     // Single validation gate — covers everything: AI's Page content + the
-    // service-derived theme/navigation/metadata. If the AI emitted a bad
-    // variant enum or the derivation slipped, this throws ZodError and
-    // the eval rig tags it `phase: 'post-injection-validation'`.
-    const validated = SiteSchema.parse(site);
+    // service-derived theme/navigation/metadata + canonical-schema defaults
+    // (e.g. seo.noIndex=false, link.external=false). If the AI emitted a
+    // bad variant enum or the derivation slipped, this throws ZodError
+    // and the eval rig tags it `phase: 'post-injection-validation'`.
+    const validated: Site = SiteSchema.parse(siteInput);
 
     return {
       site: normalizeStrings(validated),

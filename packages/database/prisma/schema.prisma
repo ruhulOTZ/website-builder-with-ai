@@ -29,8 +29,9 @@ model BusinessProfileRecord {
 /// A user-owned builder project. Created in Phase 2.4 to give the builder UI
 /// a persistent surface independent of the per-stage records below.
 /// `businessProfileId` traces the historical BusinessProfileRecord (audit);
-/// `businessProfileJson` is the live editable copy the user mutates. 2.4c
-/// will add `designBriefId` + `designBriefJson` with the same pattern.
+/// `businessProfileJson` is the live editable copy the user mutates.
+/// `generatedSiteId` / `generatedSiteJson` follow the same immutable-record +
+/// denormalized-copy split introduced for profile and brief in 2.4.
 model Project {
   id                  String        @id @default(cuid())
   userId              String // Clerk user ID once auth lands in Phase 2.5; dev stub until then.
@@ -41,6 +42,8 @@ model Project {
   businessProfileJson Json? // denormalized editable BusinessProfile; null until parse runs
   designBriefId       String? // loose-string FK to DesignBriefRecord.id
   designBriefJson     Json? // denormalized editable DesignBrief; null until generation runs
+  generatedSiteId     String? // loose-string FK to GeneratedSiteRecord.id
+  generatedSiteJson   Json? // denormalized current Site; null until home-page generation runs
   createdAt           DateTime      @default(now())
   updatedAt           DateTime      @updatedAt
 
@@ -55,6 +58,7 @@ enum ProjectStatus {
   PROFILE_CONFIRMED
   BRIEF_GENERATED
   BRIEF_CONFIRMED
+  SITE_GENERATED
   COMPLETED
 }
 

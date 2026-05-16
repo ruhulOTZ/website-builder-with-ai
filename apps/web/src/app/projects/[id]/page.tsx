@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 
 import { BriefForm } from './brief-form';
 import { GenerateBriefButton } from './generate-brief-button';
+import { GenerateHomePageButton } from './generate-home-page-button';
 import { GenerateProfileButton } from './generate-profile-button';
 import { PasteRequirementsForm } from './paste-requirements-form';
 import { ProfileForm } from './profile-form';
@@ -35,6 +36,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       rawRequirements: true,
       businessProfileJson: true,
       designBriefJson: true,
+      generatedSiteId: true,
       updatedAt: true,
     },
   });
@@ -180,19 +182,46 @@ export default async function ProjectDetailPage({ params }: PageProps) {
           {project.status === 'BRIEF_CONFIRMED' ? (
             <Card className="mt-6">
               <CardHeader>
-                <CardTitle>Next: site generation</CardTitle>
+                <CardTitle>Generate home page</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-3">
+              <CardContent className="space-y-4">
                 <p className="text-muted-foreground text-sm">
-                  Site generation — page architecture, section content, image resolution — wires up
-                  in Phase 3.
+                  Generates the home page from your confirmed brief — sections, content, image
+                  queries, and navigation. Takes roughly 20 seconds and costs one AI call.
                 </p>
-                <Button disabled title="Phase 3">
-                  Generate site (coming soon)
-                </Button>
+                <GenerateHomePageButton projectId={project.id} />
               </CardContent>
             </Card>
           ) : null}
+        </div>
+      ) : project.status === 'SITE_GENERATED' && brief !== null && profile !== null ? (
+        <div className="space-y-6">
+          <ProfileSummary profile={profile} />
+          <Card>
+            <CardHeader>
+              <CardTitle>Your home page is ready</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground text-sm">
+                We generated a home page from your confirmed brief. Click below to view it, or
+                regenerate if the result needs another pass.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {project.generatedSiteId !== null ? (
+                  <Button asChild>
+                    <Link
+                      href={`/render/${project.generatedSiteId}`}
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      View rendered site ↗
+                    </Link>
+                  </Button>
+                ) : null}
+                <GenerateHomePageButton projectId={project.id} isRegenerate />
+              </div>
+            </CardContent>
+          </Card>
         </div>
       ) : (
         <Card>

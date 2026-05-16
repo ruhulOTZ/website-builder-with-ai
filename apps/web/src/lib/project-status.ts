@@ -11,6 +11,7 @@ export const STATUS_LABEL: Record<ProjectStatus, string> = {
   PROFILE_CONFIRMED: 'Profile confirmed',
   BRIEF_GENERATED: 'Brief generated',
   BRIEF_CONFIRMED: 'Brief confirmed',
+  SITE_GENERATED: 'Site generated',
   COMPLETED: 'Completed',
 };
 
@@ -26,5 +27,6 @@ export const STATUS_VARIANT: Record<ProjectStatus, BadgeVariant> = {
   PROFILE_CONFIRMED: 'default',
   BRIEF_GENERATED: 'default',
   BRIEF_CONFIRMED: 'default',
+  SITE_GENERATED: 'success',
   COMPLETED: 'success',
 };
