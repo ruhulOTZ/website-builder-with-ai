@@ -7,6 +7,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { BusinessProfileModule } from './business-profile/business-profile.module';
 import { DesignBriefModule } from './design-brief/design-brief.module';
+import { HomePageModule } from './home-page/home-page.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { DesignBriefModule } from './design-brief/design-brief.module';
     AiModule,
     BusinessProfileModule,
     DesignBriefModule,
+    HomePageModule,
   ],
   controllers: [AppController],
   providers: [AppService],

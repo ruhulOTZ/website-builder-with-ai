@@ -58,6 +58,27 @@ enum ProjectStatus {
   COMPLETED
 }
 
+/// Persisted output of the HomePageGeneratorService.
+/// The `siteJson` column is a validated Site (Zod-checked before insert
+/// by the generator pipeline). For Phase 3-minimal the Site contains
+/// exactly one Page (the home page); Phase 3-full adds the architect
+/// step and the multi-page generation flow.
+model GeneratedSiteRecord {
+  id            String   @id @default(cuid())
+  // designBriefId: loose-string FK to DesignBriefRecord.id; tightens to a
+  // real relation in Phase 2.5 alongside the rest of the auth migration.
+  designBriefId String?
+  siteJson      Json
+  modelUsed     String
+  promptVersion String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  // Optional user link — wired in a later auth phase.
+  userId        String?
+
+  @@map("generated_site_records")
+}
+
 /// Persisted output of the DesignBriefGeneratorService.
 /// The `briefJson` column is a validated DesignBrief (Zod-checked before
 /// insert by the generator pipeline).

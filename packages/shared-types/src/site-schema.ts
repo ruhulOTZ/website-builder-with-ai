@@ -517,3 +517,4 @@ export const SiteSchema = z.object({
 });
 
 export type Site = z.infer<typeof SiteSchema>;
+export type ThemeTokens = z.infer<typeof ThemeTokensSchema>;

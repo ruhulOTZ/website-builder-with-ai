@@ -14,6 +14,10 @@
     "./fonts": {
       "types": "./src/fonts.ts",
       "default": "./src/fonts.ts"
+    },
+    "./typography": {
+      "types": "./src/typography.ts",
+      "default": "./src/typography.ts"
     }
   },
   "dependencies": {

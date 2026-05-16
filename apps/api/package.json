@@ -15,6 +15,7 @@
     "eval:brief": "ts-node --transpile-only --project tsconfig.build.json scripts/eval-brief.ts",
     "eval:cache:verify": "ts-node --transpile-only --project tsconfig.build.json scripts/verify-cache-key.ts",
     "eval:cache:verify:brief": "ts-node --transpile-only --project tsconfig.build.json scripts/verify-brief-cache-key.ts",
+    "verify:brief-to-theme": "ts-node --transpile-only --project tsconfig.build.json scripts/verify-brief-to-theme.ts",
     "diagnose:truncation": "ts-node --transpile-only --project tsconfig.build.json scripts/diagnose-truncation.ts",
     "smoke:brief": "ts-node --transpile-only --project tsconfig.build.json scripts/smoke-brief.ts"
   },
