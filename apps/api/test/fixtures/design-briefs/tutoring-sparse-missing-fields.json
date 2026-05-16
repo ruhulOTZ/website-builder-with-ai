@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "businessProfile": {
+    "domain": "education_tutoring",
+    "domainSpecifier": "test prep",
+    "businessName": "Catalyst Test Prep",
+    "oneLineDescription": "We provide SAT and ACT tutoring for high school students, primarily through one-on-one sessions.",
+    "services": [
+      {
+        "name": "SAT and ACT Tutoring",
+        "description": "One-on-one tutoring for high school students preparing for the SAT and ACT exams."
+      }
+    ],
+    "targetAudience": "High schoolers preparing for the SAT and ACT.",
+    "uniqueSellingPoints": ["Tutoring provided by former teachers", "Mostly one-on-one sessions"],
+    "brandPersonality": ["direct", "factual", "unpolished", "straightforward"],
+    "pricePoint": "mid"
+  },
+  "brandArchetype": "sage",
+  "brandArchetypeRationale": "The 'Sage' archetype best fits Catalyst Test Prep due to its emphasis on 'former teachers' and a 'factual, straightforward' brand personality. The business positions itself as a source of reliable knowledge and expert guidance for academic success, focusing on imparting proven methods for test preparation.",
+  "traits": {
+    "energy": 3,
+    "formality": 3,
+    "warmth": 3,
+    "sophistication": 4,
+    "trustworthiness": 5,
+    "novelty": 2
+  },
+  "colorPalette": {
+    "strategy": "cool_premium",
+    "primary": "oklch(0.3 0.08 270)",
+    "secondary": "oklch(0.55 0.05 240)",
+    "accent": "oklch(0.65 0.1 200)",
+    "background": "oklch(0.98 0.005 270)",
+    "surface": "oklch(0.95 0.008 270)",
+    "foreground": "oklch(0.15 0.01 270)",
+    "mutedForeground": "oklch(0.5 0.005 270)",
+    "border": "oklch(0.88 0.005 270)",
+    "success": "oklch(0.6 0.15 145)",
+    "warning": "oklch(0.7 0.15 70)",
+    "danger": "oklch(0.55 0.18 25)"
+  },
+  "colorPaletteRationale": "The 'cool_premium' strategy aligns with the 'factual' and 'trustworthy' brand personality, reflecting the academic rigor provided by 'former teachers.' It avoids being overly flashy, fitting the 'unpolished, straightforward' aspect, while still conveying a sense of quality and expertise appropriate for a test prep service.",
+  "typography": "archivo_inter",
+  "typographyRationale": "Archivo and Inter create a clean, modern sans-serif pairing that is highly readable and professional. This choice supports the 'factual,' 'direct,' and 'straightforward' brand personality, ensuring clarity and conveying authority without being overly decorative or stuffy, which is fitting for former teachers.",
+  "layoutArchetype": "classic_corporate",
+  "layoutArchetypeRationale": "A 'classic_corporate' layout provides a structured, predictable, and trustworthy framework. This aligns with the 'factual' and 'straightforward' brand personality, effectively organizing information about services and teacher credentials without unnecessary visual distractions, building confidence with the target audience of high schoolers and their parents.",
+  "imagery": "documentary_photography",
+  "imageryRationale": "Documentary photography captures real, authentic moments of students learning and interacting with tutors. This choice reinforces the 'unpolished' and 'straightforward' brand personality by showing genuine engagement and the personalized nature of 'one-on-one sessions' with 'former teachers,' building trust through realism.",
+  "density": "balanced",
+  "radius": "subtle",
+  "shadow": "subtle",
+  "motion": "minimal_subtle",
+  "voice": "confident_direct",
+  "voiceRationale": "The brand explicitly describes itself as 'direct, factual, unpolished, straightforward,' and the original document's tone is very concise. A 'confident_direct' voice perfectly matches this no-nonsense approach, instilling trust in the expertise of 'former teachers' and focusing clearly on the value proposition without unnecessary fluff.",
+  "voiceExamples": {
+    "headline": "Master the SAT & ACT. Achieve Your Score.",
+    "cta": "Start Your Prep",
+    "microcopy": "Expert guidance from former teachers. Personalized one-on-one sessions."
+  },
+  "componentPreferences": {
+    "heroVariantHint": "split_image_left",
+    "cardStyleHint": "outlined",
+    "buttonStyleHint": "solid"
+  },
+  "recommendedPages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "purpose": "Introduce Catalyst Test Prep, its mission, and core services.",
+      "priority": "primary"
+    },
+    {
+      "slug": "our-approach",
+      "title": "Our Approach",
+      "purpose": "Detail the one-on-one tutoring methodology and how it benefits students.",
+      "priority": "primary"
+    },
+    {
+      "slug": "programs-pricing",
+      "title": "Programs & Pricing",
+      "purpose": "Outline specific SAT/ACT tutoring packages and transparent pricing.",
+      "priority": "primary"
+    },
+    {
+      "slug": "meet-the-tutors",
+      "title": "Meet Our Tutors",
+      "purpose": "Showcase the credentials and experience of the 'former teachers,' building trust and expertise.",
+      "priority": "secondary"
+    },
+    {
+      "slug": "success-stories",
+      "title": "Success Stories",
+      "purpose": "Feature testimonials and results from past students to provide social proof.",
+      "priority": "secondary"
+    },
+    {
+      "slug": "contact",
+      "title": "Contact",
+      "purpose": "Provide clear ways for prospective students/parents to get in touch and enroll.",
+      "priority": "primary"
+    }
+  ]
+}

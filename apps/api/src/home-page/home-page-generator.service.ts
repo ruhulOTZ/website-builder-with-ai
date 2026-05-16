@@ -2,18 +2,26 @@ import { randomUUID } from 'node:crypto';
 
 import { Inject, Injectable, Logger } from '@nestjs/common';
 import { type AIProvider } from '@repo/ai';
-import {
-  type BusinessProfile,
-  type DesignBrief,
-  PageSchema,
-  type Site,
-  SiteSchema,
-} from '@repo/shared-types';
+import { type BusinessProfile, type DesignBrief, type Site, SiteSchema } from '@repo/shared-types';
 
 import { AI_PROVIDER } from '../ai/ai.tokens';
 import { normalizeStrings } from '../shared/normalize-strings';
 
 import { briefToThemeTokens } from './brief-to-theme';
+// Two-schema discipline:
+//   - Narrow at the AI seam: HomePageGenerationSchema only allows the 4
+//     section types this phase ships. Keeps Gemini's structured-output
+//     constraint automaton inside its "too many states" budget — see the
+//     generation-schemas/home-page-v1.ts header for the failure mode.
+//   - Wide at the storage seam: SiteSchema.parse(merged) below validates
+//     the final merged Site. Any narrow-schema output is by construction
+//     valid under the wide schema, so SiteSchema.parse covers both the
+//     AI's content and the service-side injections in one gate.
+import {
+  GENERATION_SCHEMA_VERSION,
+  HomePageGenerationSchema,
+  type HomePageGenerationOutput,
+} from './generation-schemas/home-page-v1';
 import { buildHomePagePrompt, PROMPT_VERSION } from './prompts/home-page-v1';
 
 const MODEL = 'gemini-2.5-flash';
@@ -41,8 +49,8 @@ const MAX_OUTPUT_TOKENS = 24576;
  * content, image queries) means the schemas align cleanly: SiteSchema.parse
  * catches any drift on either side.
  */
-const GenerationSchema = PageSchema;
-type GenerationOutput = Site['pages'][number];
+const GenerationSchema = HomePageGenerationSchema;
+type GenerationOutput = HomePageGenerationOutput;
 
 export interface GenerateInput {
   profile: BusinessProfile;
@@ -77,7 +85,7 @@ export class HomePageGeneratorService {
     });
 
     this.logger.log(
-      `Generating home page (source=${input.sourceLabel ?? 'unlabeled'}, business=${input.profile.businessName}, prompt=${PROMPT_VERSION})`,
+      `Generating home page (source=${input.sourceLabel ?? 'unlabeled'}, business=${input.profile.businessName}, prompt=${PROMPT_VERSION}, generation-schema=${GENERATION_SCHEMA_VERSION})`,
     );
 
     // Generate the Page. The AI does not see the schemas for theme,

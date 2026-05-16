@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "businessProfile": {
+    "domain": "dental_clinic",
+    "domainSpecifier": "pediatric",
+    "businessName": "Bloom Pediatric Dental, PLLC",
+    "oneLineDescription": "Bloom Pediatric Dental provides comprehensive, compassionate dental care for children aged 2-18 in West Asheville, focusing on comfort and evidence-based practices.",
+    "services": [
+      {
+        "name": "Routine preventive care",
+        "description": "Cleanings, exams, sealants, and fluoride treatments for children."
+      },
+      {
+        "name": "Restorative care",
+        "description": "Fillings and crowns to address dental issues."
+      },
+      {
+        "name": "Pediatric orthodontic screenings and referrals",
+        "description": "Screenings for orthodontic needs and coordination with local orthodontists for treatment."
+      },
+      {
+        "name": "Same-day emergency appointments",
+        "description": "Emergency dental care available Tuesday through Saturday."
+      },
+      {
+        "name": "Specialized care for neurodivergent children",
+        "description": "Accommodations including quiet rooms and weighted blankets available on request."
+      }
+    ],
+    "targetAudience": "Parents (predominantly mothers, 28–44) of children aged 2–12 in West Asheville and surrounding ZIP codes, and local pediatricians and family physicians making referrals.",
+    "uniqueSellingPoints": [
+      "longer appointment lengths (45-minute first visits as a standard)",
+      "continuity of hygienist assignments year-over-year",
+      "an evidence-based no-upsell policy on fluoride and sealants",
+      "accommodations for sensory-sensitive patients"
+    ],
+    "brandPersonality": ["warm", "plainspoken", "parental", "reassuring", "direct"],
+    "pricePoint": "mid",
+    "location": {
+      "city": "Asheville",
+      "region": "NC",
+      "country": "USA",
+      "isOnlineOnly": false
+    },
+    "contact": {
+      "email": "bloom@bloompediatric.com",
+      "phone": "(828) 555-0184",
+      "address": "412 Haywood Road, Asheville NC 28806"
+    }
+  },
+  "brandArchetype": "caregiver",
+  "brandArchetypeRationale": "Bloom Pediatric Dental explicitly prioritizes a 'warm, parental, reassuring' experience, offering 'longer appointment lengths,' 'accommodations for sensory-sensitive patients' with quiet rooms and weighted blankets, and an 'evidence-based no-upsell policy.' This deep focus on nurturing well-being, easing anxiety, and protecting children's best interests aligns perfectly with the Caregiver archetype.",
+  "traits": {
+    "energy": 2,
+    "formality": 2,
+    "warmth": 5,
+    "sophistication": 3,
+    "trustworthiness": 5,
+    "novelty": 3
+  },
+  "colorPalette": {
+    "strategy": "pastel_soft",
+    "primary": "oklch(0.7 0.09 140)",
+    "secondary": "oklch(0.65 0.07 45)",
+    "accent": "oklch(0.85 0.1 80)",
+    "background": "oklch(0.98 0.01 70)",
+    "surface": "oklch(0.95 0.01 70)",
+    "foreground": "oklch(0.25 0.04 70)",
+    "mutedForeground": "oklch(0.5 0.03 70)",
+    "border": "oklch(0.9 0.01 70)",
+    "success": "oklch(0.72 0.13 145)",
+    "warning": "oklch(0.78 0.14 70)",
+    "danger": "oklch(0.6 0.18 25)"
+  },
+  "colorPaletteRationale": "The 'pastel_soft' strategy perfectly aligns with the 'warm, parental, reassuring' brand personality and the pediatric focus. Soft greens and warm corals evoke a gentle, nurturing environment, reinforcing the clinic's commitment to comfort and a 'never clinical' feel, especially important for sensory-sensitive patients and their parents.",
+  "typography": "fraunces_inter",
+  "typographyRationale": "The Fraunces serif provides a warm, approachable, and slightly editorial feel that supports the 'parental' and 'reassuring' brand personality, avoiding a starkly clinical look. Paired with Inter, a highly legible sans-serif, it ensures clarity and a plainspoken tone, crucial for communicating effectively with parents.",
+  "layoutArchetype": "storytelling_scroll",
+  "layoutArchetypeRationale": "A 'storytelling_scroll' layout allows the website to gently guide parents through the clinic's compassionate approach, services, and team. This mirrors the clinic's 'we move slowly' and 'no surprises' ethos, building trust and reassurance by unfolding information in a calm, narrative flow.",
+  "imagery": "editorial_lifestyle",
+  "imageryRationale": "'Editorial_lifestyle' photography will capture authentic, warm interactions between children, parents, and staff in a bright, inviting, yet not overly sterile, setting. This approach emphasizes the clinic's 'compassionate' and 'parental' care, making the environment feel safe and welcoming rather than clinical, and showcasing specialized accommodations like quiet rooms.",
+  "density": "airy",
+  "radius": "rounded",
+  "shadow": "soft_diffuse",
+  "motion": "smooth_premium",
+  "voice": "warm_friendly",
+  "voiceRationale": "The client explicitly wants a 'warm, plainspoken, parental, reassuring' voice that is 'never clinical' and 'not corporate.' This aligns perfectly with a 'warm_friendly' tone, emphasizing empathy and clear, supportive communication with parents, as exemplified by phrases like 'we move slowly' and 'no surprises.'",
+  "voiceExamples": {
+    "headline": "Gentle care for tiny smiles, built on trust.",
+    "cta": "Schedule Your Child's First Visit",
+    "microcopy": "We take our time to ensure every child feels safe and understood."
+  },
+  "componentPreferences": {
+    "heroVariantHint": "split_image_left",
+    "cardStyleHint": "elevated",
+    "buttonStyleHint": "solid"
+  },
+  "recommendedPages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "purpose": "Introduce the clinic's compassionate approach and key differentiators for parents.",
+      "priority": "primary"
+    },
+    {
+      "slug": "our-approach",
+      "title": "Our Approach",
+      "purpose": "Detail the clinic's unique philosophy, including longer appointments, no-upsell policy, and sensory accommodations.",
+      "priority": "primary"
+    },
+    {
+      "slug": "services",
+      "title": "Services",
+      "purpose": "Clearly outline all dental services offered, from preventive to restorative and emergency care.",
+      "priority": "primary"
+    },
+    {
+      "slug": "meet-the-team",
+      "title": "Meet Our Team",
+      "purpose": "Introduce Dr. Eckert, Dr. Riggins, and the hygienists, highlighting their experience and the continuity of care.",
+      "priority": "secondary"
+    },
+    {
+      "slug": "new-patients",
+      "title": "For New Patients",
+      "purpose": "Provide essential information for first visits, including forms, insurance, and what to expect.",
+      "priority": "secondary"
+    },
+    {
+      "slug": "patient-resources",
+      "title": "Patient Resources",
+      "purpose": "Offer helpful FAQs, at-home care tips, and guidance for dental emergencies.",
+      "priority": "optional"
+    },
+    {
+      "slug": "contact",
+      "title": "Contact Us",
+      "purpose": "Provide clear contact information, address, hours, and a map.",
+      "priority": "primary"
+    }
+  ]
+}

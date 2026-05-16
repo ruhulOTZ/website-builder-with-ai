@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "businessProfile": {
+    "domain": "restaurant_cafe",
+    "domainSpecifier": "bakery",
+    "businessName": "Hearth",
+    "oneLineDescription": "Hearth is a small, partner-run bakery in Burlington, Vermont, offering a focused selection of fresh baked goods.",
+    "services": [],
+    "targetAudience": "Customers of a small bakery in Burlington, Vermont.",
+    "uniqueSellingPoints": ["Hand-crafted by partners", "Focused menu of artisanal baked goods"],
+    "brandPersonality": ["direct", "unpretentious", "simple", "focused", "practical"],
+    "pricePoint": "mid",
+    "location": {
+      "city": "Burlington",
+      "region": "Vermont",
+      "isOnlineOnly": false
+    }
+  },
+  "brandArchetype": "creator",
+  "brandArchetypeRationale": "Hearth is defined by its 'hand-crafted by partners' approach and 'focused menu of artisanal baked goods.' The document's emphasis on 'just us, no employees' further reinforces the personal dedication to the craft, making the Creator archetype, focused on skill, imagination, and bringing something new to life, a perfect fit. The desire for a 'simple website' also aligns with a creator focused on their product rather than elaborate self-promotion.",
+  "traits": {
+    "energy": 3,
+    "formality": 2,
+    "warmth": 4,
+    "sophistication": 4,
+    "trustworthiness": 5,
+    "novelty": 3
+  },
+  "colorPalette": {
+    "strategy": "warm_earth",
+    "primary": "oklch(0.45 0.12 60)",
+    "secondary": "oklch(0.7 0.08 100)",
+    "accent": "oklch(0.75 0.15 80)",
+    "background": "oklch(0.98 0.01 80)",
+    "surface": "oklch(0.95 0.015 80)",
+    "foreground": "oklch(0.2 0.04 60)",
+    "mutedForeground": "oklch(0.5 0.03 60)",
+    "border": "oklch(0.9 0.01 80)",
+    "success": "oklch(0.7 0.18 145)",
+    "warning": "oklch(0.75 0.18 70)",
+    "danger": "oklch(0.55 0.22 25)"
+  },
+  "colorPaletteRationale": "The name 'Hearth' directly evokes warmth, comfort, and the traditional process of baking. The 'warm_earth' palette strategy will reflect the natural ingredients, hand-crafted nature, and the inviting, unpretentious brand personality of a local bakery in Burlington, Vermont.",
+  "typography": "fraunces_inter",
+  "typographyRationale": "The Fraunces serif typeface provides an artisanal, crafted feel that aligns with the 'hand-crafted' nature of Hearth's baked goods and the Creator archetype. Its contemporary yet classic aesthetic balances the brand's 'unpretentious' and 'sophisticated' traits, while Inter ensures clear readability for practical information like hours and daily menus.",
+  "layoutArchetype": "bento_box",
+  "layoutArchetypeRationale": "The 'bento_box' layout allows for a clean, organized presentation of key, distinct pieces of information like daily menus, hours, and farmers market locations. This aligns perfectly with the brand's stated desire for a 'simple website' and its 'focused' and 'practical' personality, making essential details easily digestible for local customers.",
+  "imagery": "documentary_photography",
+  "imageryRationale": "To emphasize the 'hand-crafted by partners' aspect and the authenticity of the 'artisanal baked goods,' documentary photography will capture the real process, the texture of the bread, and the inviting atmosphere of the bakery. This aligns with the 'unpretentious' and 'direct' brand personality, showing the genuine quality of their creations.",
+  "density": "balanced",
+  "radius": "subtle",
+  "shadow": "subtle",
+  "motion": "minimal_subtle",
+  "voice": "warm_friendly",
+  "voiceRationale": "The language used in the original document ('my partner Jess and i run,' 'just us, no employees,' 'that's really it') conveys a very personal, approachable, and unpretentious tone. A 'warm_friendly' voice will best reflect this direct, community-oriented, and inviting personality of a partner-run local bakery.",
+  "voiceExamples": {
+    "headline": "Hand-Crafted Goodness, Fresh From Our Hearth",
+    "cta": "See Today's Menu",
+    "microcopy": "Baked with love, just for you."
+  },
+  "componentPreferences": {
+    "heroVariantHint": "centered_text_over_image",
+    "cardStyleHint": "flat",
+    "buttonStyleHint": "solid"
+  },
+  "recommendedPages": [
+    {
+      "slug": "home",
+      "title": "Hearth Bakery",
+      "purpose": "Introduce the bakery and highlight daily offerings or key announcements.",
+      "priority": "primary"
+    },
+    {
+      "slug": "today-s-menu",
+      "title": "Today's Menu",
+      "purpose": "Display the specific baked goods available on the current day, as requested by the business.",
+      "priority": "primary"
+    },
+    {
+      "slug": "hours-location",
+      "title": "Hours & Location",
+      "purpose": "Provide current operating hours, the physical address, and details about the farmers market booth, as explicitly requested.",
+      "priority": "primary"
+    },
+    {
+      "slug": "our-story",
+      "title": "Our Story",
+      "purpose": "Share the story of the partners, their passion for baking, and the 'hand-crafted' philosophy.",
+      "priority": "secondary"
+    },
+    {
+      "slug": "contact",
+      "title": "Contact Us",
+      "purpose": "Offer simple contact information for inquiries.",
+      "priority": "secondary"
+    }
+  ]
+}

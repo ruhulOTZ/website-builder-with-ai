@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "businessProfile": {
+    "domain": "yoga_wellness",
+    "domainSpecifier": "Hybrid boutique fitness and wellness studio",
+    "businessName": "Open Stand",
+    "oneLineDescription": "Open Stand is a hybrid boutique fitness and wellness studio offering barre and pilates classes, IV vitamin drips, an infrared sauna, and a low-key cafe.",
+    "services": [
+      {
+        "name": "Barre and Pilates classes",
+        "description": "Group fitness classes focusing on barre and pilates techniques."
+      },
+      {
+        "name": "IV vitamin drips",
+        "description": "Intravenous vitamin therapy administered by medical professionals."
+      },
+      {
+        "name": "Infrared sauna",
+        "description": "Access to a small infrared sauna for wellness benefits."
+      },
+      {
+        "name": "Cafe",
+        "description": "A publicly accessible cafe offering adaptogenic drinks and bone broth."
+      }
+    ],
+    "targetAudience": "Women in their 30s–40s in Bend who care about how they feel but are done with the SoulCycle-adjacent boutique cardio scene.",
+    "uniqueSellingPoints": [
+      "A unique hybrid of boutique fitness classes and comprehensive wellness services.",
+      "A dedicated 'third-place' for women in their 30s-40s in Bend.",
+      "A minimal, warm, ceramic-studio-feeling aesthetic with natural wood.",
+      "An alternative to the prevalent boutique cardio scene, focusing on holistic well-being."
+    ],
+    "brandPersonality": ["informal", "direct", "discerning", "warm", "minimalist", "honest"],
+    "pricePoint": "premium",
+    "location": {
+      "city": "Bend",
+      "region": "Oregon",
+      "isOnlineOnly": false
+    },
+    "contact": {
+      "email": "cassidy@openstand.studio",
+      "phone": "541-555-0290"
+    }
+  },
+  "brandArchetype": "caregiver",
+  "brandArchetypeRationale": "Open Stand aims to be a nurturing 'third-place' for women in their 30s-40s, offering a holistic blend of fitness and wellness services (barre, pilates, IV drips, sauna, cafe). The focus is on helping the target audience 'care about how they feel' and providing a supportive, discerning alternative to trendy, high-energy cardio, aligning with the caregiver's role of fostering well-being and community. The presence of medical professionals (a former PT and an MD) further reinforces trust and care.",
+  "traits": {
+    "energy": 3,
+    "formality": 2,
+    "warmth": 4,
+    "sophistication": 4,
+    "trustworthiness": 5,
+    "novelty": 4
+  },
+  "colorPalette": {
+    "strategy": "natural_organic",
+    "primary": "oklch(0.7 0.08 140)",
+    "secondary": "oklch(0.85 0.04 70)",
+    "accent": "oklch(0.6 0.12 145)",
+    "background": "oklch(0.98 0.005 80)",
+    "surface": "oklch(0.95 0.008 80)",
+    "foreground": "oklch(0.25 0.02 90)",
+    "mutedForeground": "oklch(0.5 0.01 90)",
+    "border": "oklch(0.88 0.01 120)",
+    "success": "oklch(0.7 0.18 145)",
+    "warning": "oklch(0.75 0.18 70)",
+    "danger": "oklch(0.55 0.22 25)"
+  },
+  "colorPaletteRationale": "The brand's stated aesthetic is 'minimal, warm, ceramic-studio-feeling' with 'natural wood' and an existing palette of 'soft sage green with a charcoal text color.' The natural_organic strategy directly supports this grounded, organic, and inviting atmosphere, appealing to a discerning audience seeking holistic well-being and a calm alternative to prevalent trends. The chosen OKLCH values reflect the specific sage green, warm neutrals, and charcoal mentioned.",
+  "typography": "fraunces_inter",
+  "typographyRationale": "The 'ceramic-studio-feeling aesthetic' combined with 'minimal, warm' and 'discerning' brand personality suggests a blend of classic elegance and modern approachability. Fraunces (serif) offers a refined, artistic touch that echoes the studio's craft-like feel, while Inter (sans-serif) provides clear, honest readability for the diverse services, avoiding an overly corporate or overly trendy look.",
+  "layoutArchetype": "immersive_visual",
+  "layoutArchetypeRationale": "The desire for a 'minimal, warm, ceramic-studio-feeling aesthetic with natural wood' and a 'premium' price point suggests a focus on showcasing the beautiful space and inviting atmosphere. An immersive visual layout with full-bleed imagery will immediately convey the unique 'third-place' vibe and aesthetic, drawing in the discerning audience and allowing the visual 'vibe' to speak volumes.",
+  "imagery": "editorial_lifestyle",
+  "imageryRationale": "To convey the 'minimal, warm, ceramic-studio-feeling aesthetic' and the 'third-place' community vibe, high-quality, artfully composed lifestyle photography is essential. It will showcase real people engaging with the services (barre, pilates, cafe) and the inviting natural wood and ceramic textures of the space, aligning with the discerning, premium brand without being overly staged or clinical.",
+  "density": "airy",
+  "radius": "subtle",
+  "shadow": "soft_diffuse",
+  "motion": "smooth_premium",
+  "voice": "warm_friendly",
+  "voiceRationale": "The founder's voice is 'informal' and 'direct,' and the brand aims to be a 'third-place' for women, fostering community and care. While 'discerning' and 'premium,' the overall tone should be inviting and approachable, focusing on making the audience feel comfortable and understood, rather than overly formal or clinical, even with medical services.",
+  "voiceExamples": {
+    "headline": "Your Space to Feel Good, Inside and Out.",
+    "cta": "Explore Our Offerings",
+    "microcopy": "More than a studio, it's a sanctuary for holistic well-being. Come as you are."
+  },
+  "componentPreferences": {
+    "heroVariantHint": "centered_text_over_image",
+    "cardStyleHint": "elevated",
+    "buttonStyleHint": "solid"
+  },
+  "recommendedPages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "purpose": "Introduce Open Stand's unique hybrid concept and aesthetic, inviting visitors into the 'third-place' experience.",
+      "priority": "primary"
+    },
+    {
+      "slug": "classes",
+      "title": "Classes & Schedule",
+      "purpose": "Provide details on barre and pilates classes, with a clear link to the booking system.",
+      "priority": "primary"
+    },
+    {
+      "slug": "wellness-services",
+      "title": "Wellness Services",
+      "purpose": "Detail the IV vitamin drips and infrared sauna, highlighting benefits and booking information.",
+      "priority": "primary"
+    },
+    {
+      "slug": "cafe",
+      "title": "The Cafe",
+      "purpose": "Showcase the low-key cafe, its offerings (adaptogenic drinks, bone broth), and its role as a publicly accessible community hub.",
+      "priority": "secondary"
+    },
+    {
+      "slug": "our-story",
+      "title": "Our Story",
+      "purpose": "Share the vision behind Open Stand, introducing Cassidy and Dr. Anika, and emphasizing the 'third-place' philosophy.",
+      "priority": "secondary"
+    },
+    {
+      "slug": "contact-visit",
+      "title": "Contact & Visit",
+      "purpose": "Provide location details, contact information, and hours of operation for the studio and cafe.",
+      "priority": "secondary"
+    }
+  ]
+}

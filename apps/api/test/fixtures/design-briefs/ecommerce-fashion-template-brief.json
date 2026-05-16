@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "businessProfile": {
+    "domain": "ecommerce_fashion",
+    "businessName": "SaltHouse",
+    "tagline": "Made well, made once",
+    "oneLineDescription": "SaltHouse offers women's clothing, including knitwear, denim, and simple staples, with limited drops and a focus on quality craftsmanship.",
+    "services": [],
+    "targetAudience": "Women aged 28-45 in coastal cities like Boston, Portland ME, Portsmouth, and Mystic, with household incomes of $80k-$180k, who own investment pieces and read publications like The Cut and House Beautiful.",
+    "uniqueSellingPoints": [
+      "Limited drops, 4 per year",
+      "Knitwear is made by a small mill in Northern Ireland",
+      "Denim is selvedge, made in Japan",
+      "Founder is Eliza Brand — former buyer at Toast (the brand)",
+      "We do not run sales. Ever. Price is the price."
+    ],
+    "brandPersonality": ["direct", "concise", "factual", "unembellished"],
+    "pricePoint": "premium",
+    "location": {
+      "isOnlineOnly": true
+    },
+    "contact": {
+      "email": "hello@salthouse.co"
+    }
+  },
+  "brandArchetype": "ruler",
+  "brandArchetypeRationale": "The Ruler archetype aligns with SaltHouse's uncompromising stance on quality ('Made well, made once'), its premium pricing and 'no sales, ever' policy ('Price is the price'), and its desire for an 'Old money but not weird about it' aesthetic, suggesting quiet authority and curated exclusivity. The limited drops also speak to control and a high-standards approach.",
+  "traits": {
+    "energy": 2,
+    "formality": 4,
+    "warmth": 2,
+    "sophistication": 5,
+    "trustworthiness": 5,
+    "novelty": 2
+  },
+  "colorPalette": {
+    "strategy": "cool_premium",
+    "primary": "oklch(0.28 0.05 240)",
+    "secondary": "oklch(0.65 0.02 260)",
+    "accent": "oklch(0.88 0.02 90)",
+    "background": "oklch(0.98 0.005 250)",
+    "surface": "oklch(0.95 0.007 250)",
+    "foreground": "oklch(0.15 0.01 250)",
+    "mutedForeground": "oklch(0.45 0.01 250)",
+    "border": "oklch(0.9 0.005 250)",
+    "success": "oklch(0.65 0.15 145)",
+    "warning": "oklch(0.72 0.15 70)",
+    "danger": "oklch(0.55 0.2 25)"
+  },
+  "colorPaletteRationale": "The 'cool_premium' strategy with a muted, sophisticated palette directly supports the 'Old money but not weird about it,' 'quiet,' and 'unfussy' brand vibes, as well as the premium price point and target audience who appreciate understated luxury. The deep blue hue subtly references the 'Slightly New England maritime' feel without being literal.",
+  "typography": "instrument_serif_geist",
+  "typographyRationale": "The Instrument Serif, with its elegant yet contemporary feel, speaks to the 'sophisticated,' 'old money' aesthetic and target audience reading publications like The Cut. Paired with Geist, a modern sans-serif, it maintains the 'unfussy,' 'direct,' and 'unembellished' brand personality by ensuring readability and a clean, modern edge.",
+  "layoutArchetype": "editorial_asymmetric",
+  "layoutArchetypeRationale": "The 'editorial_asymmetric' layout aligns with the brand's 'sophisticated' and 'unfussy' nature, providing a curated, magazine-like experience for an audience that reads publications like The Cut. It allows for the elegant showcasing of 'limited drops' and 'investment pieces' with a sense of deliberate composition and quiet luxury.",
+  "imagery": "editorial_lifestyle",
+  "imageryRationale": "Editorial lifestyle imagery is essential for a fashion brand targeting an audience that values 'investment pieces' and reads aspirational magazines like The Cut. It allows SaltHouse to convey the 'quiet,' 'unfussy,' and 'old money but not weird about it' brand vibes by showing the clothing in sophisticated, natural, and aspirational settings, emphasizing quality over overt trendiness.",
+  "density": "airy",
+  "radius": "subtle",
+  "shadow": "subtle",
+  "motion": "smooth_premium",
+  "voice": "minimal_understated",
+  "voiceRationale": "The 'minimal_understated' voice perfectly captures SaltHouse's brand personality: 'direct, concise, factual, unembellished,' and 'quiet, unfussy.' It reinforces the 'Made well, made once' tagline and the confident 'We do not run sales. Ever. Price is the price' policy by letting the quality speak for itself without excessive marketing language.",
+  "voiceExamples": {
+    "headline": "Considered. Crafted. Cherished.",
+    "cta": "Explore the Collection",
+    "microcopy": "Quality endures. Our denim, made in Japan."
+  },
+  "componentPreferences": {
+    "heroVariantHint": "centered_text_over_image",
+    "cardStyleHint": "outlined",
+    "buttonStyleHint": "outlined"
+  },
+  "recommendedPages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "purpose": "Primary entry point, showcasing the latest collection and brand ethos.",
+      "priority": "primary"
+    },
+    {
+      "slug": "shop",
+      "title": "Shop",
+      "purpose": "Browse and discover available knitwear, denim, and staples.",
+      "priority": "primary"
+    },
+    {
+      "slug": "product-details",
+      "title": "Product Details",
+      "purpose": "Detailed information, craftsmanship story, and imagery for each item.",
+      "priority": "primary"
+    },
+    {
+      "slug": "our-story",
+      "title": "Our Story",
+      "purpose": "Share the founder's background, the brand's philosophy, and commitment to quality.",
+      "priority": "secondary"
+    },
+    {
+      "slug": "contact",
+      "title": "Contact",
+      "purpose": "Provide customer service contact information.",
+      "priority": "secondary"
+    },
+    {
+      "slug": "craftsmanship",
+      "title": "Craftsmanship",
+      "purpose": "Elaborate on the origins of materials and manufacturing processes (e.g., Irish mill, Japanese selvedge denim).",
+      "priority": "optional"
+    },
+    {
+      "slug": "journal",
+      "title": "Journal",
+      "purpose": "Announce new limited drops, share editorial content related to style and quality.",
+      "priority": "optional"
+    }
+  ]
+}

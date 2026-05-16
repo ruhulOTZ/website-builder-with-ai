@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "businessProfile": {
+    "domain": "law_firm",
+    "domainSpecifier": "immigration",
+    "businessName": "Greene & Tova",
+    "oneLineDescription": "Greene & Tova is a boutique Toronto-based immigration law firm specializing in Canadian work permits, permanent residence, citizenship, and LMIA support for employers.",
+    "services": [
+      {
+        "name": "Canadian Work Permits",
+        "description": "Assisting individuals and employers with obtaining Canadian work permits."
+      },
+      {
+        "name": "Permanent Residence Applications",
+        "description": "Guiding individuals through the process of applying for Canadian permanent residence."
+      },
+      {
+        "name": "Citizenship Applications",
+        "description": "Supporting clients with their applications for Canadian citizenship."
+      },
+      {
+        "name": "LMIA Support for Employers",
+        "description": "Providing Labour Market Impact Assessment (LMIA) support for employers hiring foreign workers."
+      },
+      {
+        "name": "Corporate Mobility Consulting",
+        "description": "Facilitating the relocation of employees to Canada for mid-sized US and EU tech companies."
+      },
+      {
+        "name": "Individual Permanent Status Applications",
+        "description": "Assisting individuals already in Canada on temporary visas to achieve permanent resident status."
+      }
+    ],
+    "targetAudience": "Mid-sized US and EU tech companies relocating employees to Canada, and individuals in Canada on temporary visas seeking permanent status.",
+    "uniqueSellingPoints": [
+      "Partners' in-house tech company experience provides employer-side understanding.",
+      "Weekly newsletter on Canadian immigration policy with 8,000 subscribers.",
+      "Honest assessment of case viability, turning down weak cases."
+    ],
+    "brandPersonality": ["direct", "plain", "unpretentious", "modern"],
+    "pricePoint": "mid",
+    "location": {
+      "city": "Toronto",
+      "region": "Ontario",
+      "country": "Canada",
+      "isOnlineOnly": false
+    },
+    "contact": {
+      "email": "avi@greenetova.ca",
+      "address": "401 Spadina Ave, Suite 600"
+    }
+  },
+  "brandArchetype": "everyman",
+  "brandArchetypeRationale": "The firm explicitly states its voice is 'direct, plain English, no Latin' and aims to sound 'more like a tech blog than a law firm.' Coupled with the partners' 'in-house tech company experience' and the firm's 'unpretentious' brand personality, this points to an approachable, trustworthy expert who demystifies complex immigration law for its target audience, aligning perfectly with the Everyman archetype.",
+  "traits": {
+    "energy": 4,
+    "formality": 2,
+    "warmth": 3,
+    "sophistication": 4,
+    "trustworthiness": 5,
+    "novelty": 4
+  },
+  "colorPalette": {
+    "strategy": "cool_premium",
+    "primary": "oklch(0.45 0.1 200)",
+    "secondary": "oklch(0.6 0.05 200)",
+    "accent": "oklch(0.7 0.15 140)",
+    "background": "oklch(0.98 0.005 80)",
+    "surface": "oklch(0.95 0.005 80)",
+    "foreground": "oklch(0.15 0.01 200)",
+    "mutedForeground": "oklch(0.5 0.01 200)",
+    "border": "oklch(0.9 0.005 80)",
+    "success": "oklch(0.7 0.18 145)",
+    "warning": "oklch(0.75 0.18 70)",
+    "danger": "oklch(0.55 0.22 25)"
+  },
+  "colorPaletteRationale": "The cool_premium strategy, utilizing a refined blue-green palette, conveys the firm's 'modern' and 'trustworthy' brand personality. It reflects their focus on tech companies and corporate mobility while maintaining the professionalism of a law firm. The accent green adds a subtle touch of dynamism, representing growth and new beginnings inherent in immigration.",
+  "typography": "space_grotesk_dm_sans",
+  "typographyRationale": "The space_grotesk_dm_sans pairing aligns with the firm's 'modern' brand personality and their stated desire to sound 'more like a tech blog than a law firm.' It's clean, legible, and possesses a technical feel, resonating with their target audience of tech companies and reflecting the partners' in-house tech experience.",
+  "layoutArchetype": "bento_box",
+  "layoutArchetypeRationale": "The bento_box layout archetype reflects the firm's 'modern' and 'tech blog' personality, offering a structured yet dynamic way to present diverse information such as services, client stories, the newsletter, and the 'decisions tracker.' It allows for a clear, unpretentious, and direct presentation of content, aligning with the firm's ethos.",
+  "imagery": "abstract_geometric",
+  "imageryRationale": "Abstract_geometric imagery reinforces the 'modern' and 'direct' brand personality, aligning with the firm's focus on tech companies and its 'tech blog' aesthetic. It provides a sophisticated, clean visual language that avoids generic stock photography and communicates clarity and structured problem-solving in complex legal areas.",
+  "density": "balanced",
+  "radius": "subtle",
+  "shadow": "none",
+  "motion": "minimal_subtle",
+  "voice": "confident_direct",
+  "voiceRationale": "The firm explicitly states its voice should be 'direct, plain English, no Latin' and that they are told they 'sound more like a tech blog than a law firm.' This perfectly aligns with a confident_direct voice, emphasizing clarity, honesty, and a no-nonsense approach to legal guidance.",
+  "voiceExamples": {
+    "headline": "Your Canadian Immigration. Clearly Defined.",
+    "cta": "Assess Your Case",
+    "microcopy": "No jargon. Just clear guidance."
+  },
+  "componentPreferences": {
+    "heroVariantHint": "split_image_right",
+    "cardStyleHint": "flat",
+    "buttonStyleHint": "solid"
+  },
+  "recommendedPages": [
+    {
+      "slug": "home",
+      "title": "Home",
+      "purpose": "Primary landing page, introduces the firm and its core value proposition.",
+      "priority": "primary"
+    },
+    {
+      "slug": "services",
+      "title": "Services",
+      "purpose": "Details all immigration services offered, from work permits to permanent residence and citizenship applications.",
+      "priority": "primary"
+    },
+    {
+      "slug": "corporate-mobility",
+      "title": "Corporate Mobility",
+      "purpose": "Dedicated section for mid-sized US and EU tech companies, highlighting LMIA support and employee relocation.",
+      "priority": "secondary"
+    },
+    {
+      "slug": "our-approach",
+      "title": "Our Approach",
+      "purpose": "Explains the firm's philosophy, team, partners' tech experience, fixed fee structure, and honest case assessment.",
+      "priority": "secondary"
+    },
+    {
+      "slug": "insights-news",
+      "title": "Insights & News",
+      "purpose": "Showcases the weekly Canadian immigration policy newsletter and the public 'decisions tracker' page.",
+      "priority": "secondary"
+    },
+    {
+      "slug": "contact",
+      "title": "Contact",
+      "purpose": "Provides contact information, location, and an intake form for prospective clients.",
+      "priority": "primary"
+    }
+  ]
+}

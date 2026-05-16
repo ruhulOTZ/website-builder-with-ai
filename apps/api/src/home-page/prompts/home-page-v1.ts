@@ -232,6 +232,8 @@ Use stable, predictable IDs:
 
 Each section has an optional \`generatorNotes\` field — a single sentence explaining WHY you chose this variant. Invisible to the rendered output; invaluable for debugging.
 
+When a section's variant choice flows from a specific brief field, the generatorNotes should NAME that field. \`"Picked split_image_right because brief.imagery is editorial_lifestyle..."\` is better than \`"Picked split_image_right because it fits the brand."\` Cite the brief; don't rationalize after the fact.
+
 - Good: \`"Picked split_image_right because brief.imagery is editorial_lifestyle and the brand wants a balanced split for the primary value prop without the immersive weight of centered_text_over_image."\`
 - Skip the notes if there's nothing meaningful to say.
 

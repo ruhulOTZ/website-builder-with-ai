@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "businessProfile": {
+    "domain": "it_services",
+    "domainSpecifier": "cloud architecture, DevOps, and platform engineering consultancy",
+    "businessName": "North Yardley Engineering, Ltd.",
+    "oneLineDescription": "North Yardley Engineering is a UK technology consultancy providing cloud architecture, DevOps, and platform engineering services to mid-market and enterprise clients.",
+    "services": [
+      {
+        "name": "Cloud migration",
+        "description": "Provider-agnostic migration services for AWS, GCP, and Azure."
+      },
+      {
+        "name": "Platform engineering and internal developer platform design",
+        "description": "Designing and implementing platform engineering and internal developer platforms."
+      },
+      {
+        "name": "Observability program design",
+        "description": "Designing SLO/SLA frameworks, error budgets, and alerting hygiene programs."
+      },
+      {
+        "name": "DevOps and CI/CD modernisation",
+        "description": "Modernising DevOps practices and Continuous Integration/Continuous Delivery pipelines."
+      },
+      {
+        "name": "Cost optimisation and FinOps program design",
+        "description": "Designing programs for cloud cost optimisation and FinOps."
+      },
+      {
+        "name": "Capability uplift",
+        "description": "Improving client team capabilities through embedded mentorship."
+      }
+    ],
+    "targetAudience": "UK and Irish technology companies between Series B and post-IPO scale (approximately 100–1,500 engineering headcount), with decision-makers being CTOs, VP Engineering, and Heads of Platform.",
+    "uniqueSellingPoints": [
+      "Operating-model-first methodology, not tools-first",
+      "Written handover documentation as a contractual deliverable on every engagement",
+      "All consultants are former practitioners with at least 7 years of in-house experience prior to consulting",
+      "The firm publishes a quarterly research letter (\"Yardley Quarterly\") covering one operational topic in depth",
+      "Member of the British Computer Society; founding partners are Chartered IT Professionals"
+    ],
+    "brandPersonality": ["restrained", "evidence-led", "expert", "professional", "direct"],
+    "pricePoint": "premium",
+    "location": {
+      "city": "London",
+      "region": "UK",
+      "country": "United Kingdom",
+      "isOnlineOnly": false
+    },
+    "contact": {
+      "email": "hello@northyardley.co.uk"
+    }
+  },
+  "brandArchetype": "sage",
+  "brandArchetypeRationale": "North Yardley Engineering is positioned as the 'quiet expert,' emphasizing an 'evidence-led' and 'operating-model-first' methodology. Their commitment to 'written handover documentation,' 'quarterly research letter,' and having 'Chartered IT Professionals' as founding partners underscores their deep, verifiable expertise and authoritative guidance, fitting the Sage archetype perfectly.",
+  "traits": {
+    "energy": 2,
+    "formality": 5,
+    "warmth": 2,
+    "sophistication": 5,
+    "trustworthiness": 5,
+    "novelty": 3
+  },
+  "colorPalette": {
+    "strategy": "cool_premium",
+    "primary": "oklch(0.25 0.05 260)",
+    "secondary": "oklch(0.5 0.03 260)",
+    "accent": "oklch(0.6 0.15 240)",
+    "background": "oklch(0.97 0.003 260)",
+    "surface": "oklch(0.94 0.005 260)",
+    "foreground": "oklch(0.18 0.02 260)",
+    "mutedForeground": "oklch(0.45 0.02 260)",
+    "border": "oklch(0.88 0.005 260)",
+    "success": "oklch(0.65 0.15 145)",
+    "warning": "oklch(0.72 0.15 70)",
+    "danger": "oklch(0.55 0.2 25)"
+  },
+  "colorPaletteRationale": "The 'cool_premium' strategy aligns with the 'restrained,' 'professional,' and 'expert' brand personality, targeting CTOs and VPs Engineering. The palette evokes the 'Stripe Press, but for consulting' aesthetic, using deep, authoritative blues and cool neutrals to convey trust and sophistication without being flashy.",
+  "typography": "space_grotesk_dm_sans",
+  "typographyRationale": "This pairing offers a modern, clean, and highly readable aesthetic that resonates with a B2B technology audience. Space Grotesk provides a contemporary, technical feel for headlines, while DM Sans ensures clarity and professionalism for the detailed, evidence-led content expected from an expert consultancy.",
+  "layoutArchetype": "minimal_typographic",
+  "layoutArchetypeRationale": "The 'minimal_typographic' layout reinforces the 'quiet expert' and 'restrained' brand personality, prioritizing clear information hierarchy and content over elaborate visuals. This approach is ideal for presenting complex technical services, 'evidence-led' methodologies, and the 'Yardley Quarterly' research letter to a discerning technical audience, echoing the 'Stripe Press' reference.",
+  "imagery": "abstract_geometric",
+  "imageryRationale": "Given the 'restrained,' 'evidence-led' personality and the B2B tech domain (cloud architecture, platform engineering), abstract geometric imagery conveys technical sophistication and structured thinking without being literal or distracting. It avoids 'first-person plural enthusiasm' and aligns with the professional, understated tone.",
+  "density": "balanced",
+  "radius": "subtle",
+  "shadow": "subtle",
+  "motion": "minimal_subtle",
+  "voice": "expert_authoritative",
+  "voiceRationale": "The brand's identity as a 'quiet expert,' emphasizing 'evidence-led' approaches, 'written handover documentation,' and avoiding 'superlatives' or 'first-person plural enthusiasm,' directly mandates an 'expert_authoritative' voice. This tone builds trust with technical decision-makers like CTOs by delivering precise, credible, and well-reasoned information.",
+  "voiceExamples": {
+    "headline": "Strategic Platform Design for Scalable Cloud Operations",
+    "cta": "Request a Consultation",
+    "microcopy": "Our operating-model-first methodology ensures alignment with your long-term technical strategy."
+  },
+  "componentPreferences": {
+    "heroVariantHint": "minimal_typographic",
+    "cardStyleHint": "flat",
+    "buttonStyleHint": "solid"
+  },
+  "recommendedPages": [
+    {
+      "slug": "home",
+      "title": "North Yardley Engineering",
+      "purpose": "Introduce the firm's expertise and core services to target decision-makers.",
+      "priority": "primary"
+    },
+    {
+      "slug": "services",
+      "title": "Our Services",
+      "purpose": "Detail the firm's practice areas like Cloud Migration, Platform Engineering, and FinOps.",
+      "priority": "primary"
+    },
+    {
+      "slug": "approach",
+      "title": "Our Approach",
+      "purpose": "Explain the 'operating-model-first methodology,' the role of experienced practitioners, and the written handover documentation.",
+      "priority": "secondary"
+    },
+    {
+      "slug": "case-studies",
+      "title": "Case Studies",
+      "purpose": "Provide evidence of successful engagements and demonstrate problem-solving capabilities.",
+      "priority": "secondary"
+    },
+    {
+      "slug": "yardley-quarterly",
+      "title": "Yardley Quarterly",
+      "purpose": "Showcase the firm's thought leadership and 'quarterly research letter' USP.",
+      "priority": "secondary"
+    },
+    {
+      "slug": "contact",
+      "title": "Contact Us",
+      "purpose": "Provide clear contact information for inquiries and consultation requests.",
+      "priority": "primary"
+    }
+  ]
+}

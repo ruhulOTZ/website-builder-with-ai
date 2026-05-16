@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "businessProfile": {
+    "domain": "gym_fitness",
+    "domainSpecifier": "powerlifting and strongman gym",
+    "businessName": "Iron Halo",
+    "oneLineDescription": "Iron Halo is a dedicated powerlifting and strongman gym in Salford, Manchester, providing a focused, technically supervised environment for serious lifters.",
+    "services": [
+      {
+        "name": "Coached programming",
+        "description": "Every member is on a written program from one of our two coaches (IPF cat-2 and BWL level 3)."
+      },
+      {
+        "name": "Meet prep",
+        "description": "We run cycles into specific competitions, preparing lifters for national events."
+      },
+      {
+        "name": "Open floor membership",
+        "description": "Membership for serious independent lifters who want the specialized environment without coaching."
+      },
+      {
+        "name": "Strongman block",
+        "description": "Saturday strongman training sessions utilizing the loading bay, weather permitting."
+      },
+      {
+        "name": "Nutrition guidance",
+        "description": "Review of food logs upon request, not a full coaching service."
+      }
+    ],
+    "targetAudience": "Serious independent lifters, competitive powerlifters, and strongman competitors seeking a focused, technically supervised training environment.",
+    "uniqueSellingPoints": [
+      "No unnecessary machines, televisions, or corporate music.",
+      "Extensive specialized equipment including calibrated platforms, competition bars, strongman implements, and 4 tonnes of plates.",
+      "Focused, technically supervised environment for heavy lifting.",
+      "Mandatory coached programming for all members.",
+      "Strict focus on serious lifters, turning away those not aligned with the gym's ethos."
+    ],
+    "brandPersonality": ["direct", "technical", "dry", "dark-humored", "unfluffy"],
+    "pricePoint": "mid",
+    "location": {
+      "city": "Salford",
+      "region": "Manchester",
+      "country": "United Kingdom",
+      "isOnlineOnly": false
+    },
+    "contact": {
+      "email": "sam@ironhalo.co.uk",
+      "phone": "0161 555 0192",
+      "address": "12 Bridgewater Way"
+    }
+  },
+  "brandArchetype": "hero",
+  "brandArchetypeRationale": "Iron Halo champions a 'hero' archetype by fostering an environment dedicated to mastery, strength, and transformation. Their strict focus on 'serious lifters,' 'technically supervised environment,' and 'mandatory coached programming' emphasizes pushing limits and achieving peak performance, aligning with the hero's pursuit of excellence and triumph over physical challenges.",
+  "traits": {
+    "energy": 5,
+    "formality": 2,
+    "warmth": 1,
+    "sophistication": 4,
+    "trustworthiness": 5,
+    "novelty": 3
+  },
+  "colorPalette": {
+    "strategy": "neon_dark",
+    "primary": "oklch(0.5 0.22 30)",
+    "secondary": "oklch(0.3 0.08 270)",
+    "accent": "oklch(0.7 0.18 100)",
+    "background": "oklch(0.1 0.02 270)",
+    "surface": "oklch(0.15 0.02 270)",
+    "foreground": "oklch(0.9 0 0)",
+    "mutedForeground": "oklch(0.6 0 0)",
+    "border": "oklch(0.25 0.02 270)",
+    "success": "oklch(0.7 0.18 145)",
+    "warning": "oklch(0.75 0.18 70)",
+    "danger": "oklch(0.55 0.22 25)",
+    "darkMode": {
+      "background": "oklch(0.05 0.01 270)",
+      "surface": "oklch(0.1 0.01 270)",
+      "foreground": "oklch(0.95 0 0)",
+      "mutedForeground": "oklch(0.65 0 0)",
+      "border": "oklch(0.2 0.01 270)"
+    }
+  },
+  "colorPaletteRationale": "The 'neon_dark' strategy reflects the raw, industrial, and intense environment of a powerlifting and strongman gym, contrasting with the 'unfluffy' brand personality and explicit rejection of 'corporate music.' The dark background provides a serious, focused tone, while vibrant accents in red and electric green highlight key information and convey energy, aligning with heavy lifting and competitive spirit.",
+  "typography": "anton_open_sans",
+  "typographyRationale": "The 'anton_open_sans' pairing, with its heavy condensed display font, immediately conveys strength, power, and an industrial aesthetic, perfectly matching the gym's focus on heavy lifting and specialized equipment. The readable sans-serif ensures that technical information about programming and meet prep is clear and accessible, supporting the 'technical' and 'direct' brand personality.",
+  "layoutArchetype": "hero_centric",
+  "layoutArchetypeRationale": "A 'hero_centric' layout immediately establishes the gym's powerful and uncompromising ethos, featuring a dominant visual that communicates the intensity and specialization of Iron Halo. This direct approach aligns with the 'unfluffy' and 'direct' brand personality, quickly communicating to serious lifters that this is their environment without unnecessary distractions.",
+  "imagery": "documentary_photography",
+  "imageryRationale": "'Documentary_photography' authentically captures the raw, intense, and focused atmosphere of Iron Halo, directly contrasting with the 'Instagram-style training' they explicitly reject. This approach showcases real lifters, real effort, and the specialized equipment without artificial staging, reinforcing the 'unfluffy' and 'direct' brand personality.",
+  "density": "balanced",
+  "radius": "sharp",
+  "shadow": "subtle",
+  "motion": "snappy_aggressive",
+  "voice": "confident_direct",
+  "voiceRationale": "The 'confident_direct' voice perfectly embodies Iron Halo's 'direct, technical, dry, dark-humored, and unfluffy' brand personality. It speaks plainly and authoritatively to their target audience of serious lifters, reinforcing their strict focus and no-nonsense environment without marketing jargon, as evidenced by the founder's own communication style.",
+  "voiceExamples": {
+    "headline": "No Fluff. Just Strength.",
+    "cta": "Apply for Membership",
+    "microcopy": "Serious lifters only. We mean it."
+  },
+  "componentPreferences": {
+    "heroVariantHint": "centered_text_over_image",
+    "cardStyleHint": "flat",
+    "buttonStyleHint": "solid"
+  },
+  "recommendedPages": [
+    {
+      "slug": "home",
+      "title": "Iron Halo",
+      "purpose": "Introduce the gym's ethos, showcase the environment, and direct serious lifters to the waitlist.",
+      "priority": "primary"
+    },
+    {
+      "slug": "our-ethos",
+      "title": "Our Ethos",
+      "purpose": "Detail what makes Iron Halo unique, including specialized equipment, the 'no corporate music' rule, and the focus on serious lifters.",
+      "priority": "primary"
+    },
+    {
+      "slug": "coaching-programs",
+      "title": "Coaching & Programs",
+      "purpose": "Explain the mandatory coached programming, meet prep cycles, and introduce the IPF cat-2 and BWL level 3 coaches.",
+      "priority": "primary"
+    },
+    {
+      "slug": "strongman-events",
+      "title": "Strongman & Events",
+      "purpose": "Provide information on strongman block sessions, hosted competitions, and sponsored lifters.",
+      "priority": "secondary"
+    },
+    {
+      "slug": "waitlist-application",
+      "title": "Waitlist Application",
+      "purpose": "Facilitate applications for prospective members, given the gym's hard cap and selective intake.",
+      "priority": "primary"
+    },
+    {
+      "slug": "contact",
+      "title": "Contact & Visit",
+      "purpose": "Provide contact details, address, and directions to the Salford location.",
+      "priority": "secondary"
+    }
+  ]
+}
