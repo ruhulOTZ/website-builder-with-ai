@@ -1,0 +1,58 @@
+/*
+ * design-system / tailwind-preset.css
+ *
+ * Bridges the `--ds-*` CSS custom properties set by <ThemeProvider> to the
+ * Tailwind v4 theme namespace, so utility classes like `bg-primary`,
+ * `text-foreground`, `border-border`, `rounded-base`, `shadow-base`,
+ * `font-heading`, and `font-body` resolve to the active theme.
+ *
+ * Naming convention:
+ *   --ds-color-*       set by <ThemeProvider> for site theme colors (namespaced
+ *                      to avoid clashing with shadcn's own tokens in the dashboard)
+ *   --ds-font-*        set by <ThemeProvider> for resolved font families
+ *   --radius           set by <ThemeProvider> from enum (sharp|subtle|rounded|pill)
+ *   --shadow           set by <ThemeProvider> from enum
+ *   --density-scale    set by <ThemeProvider> from enum
+ *
+ * Scalars (--radius, --shadow, --density-scale) are intentionally NOT namespaced
+ * because components reference them in arbitrary values, e.g.
+ *   className="rounded-[var(--radius)] shadow-[var(--shadow)]"
+ *
+ * The fallback in each var() chain points to shadcn's own tokens (--primary,
+ * --background, etc.) so the dashboard chrome — which lives OUTSIDE any
+ * <ThemeProvider> subtree — keeps working with the same Tailwind utilities.
+ *
+ * Consumers: import this file from the app's global stylesheet, e.g.
+ *   @import '@repo/design-system/tailwind-preset.css';
+ */
+
+@theme inline {
+  /* Colors — `bg-primary`, `text-primary`, `border-primary`, etc. */
+  --color-primary: var(--ds-color-primary, var(--primary));
+  --color-secondary: var(--ds-color-secondary, var(--secondary));
+  --color-accent: var(--ds-color-accent, var(--accent));
+  --color-background: var(--ds-color-background, var(--background));
+  --color-surface: var(--ds-color-surface, var(--card));
+  --color-foreground: var(--ds-color-foreground, var(--foreground));
+  --color-muted-foreground: var(--ds-color-muted-foreground, var(--muted-foreground));
+  --color-border: var(--ds-color-border, var(--border));
+  --color-success: var(--ds-color-success, oklch(0.7 0.18 145));
+  --color-warning: var(--ds-color-warning, oklch(0.8 0.15 75));
+  --color-danger: var(--ds-color-danger, oklch(0.6 0.22 25));
+
+  /* Typography — `font-heading`, `font-body`. */
+  --font-heading: var(--ds-font-heading, ui-sans-serif, system-ui, sans-serif);
+  --font-body: var(--ds-font-body, ui-sans-serif, system-ui, sans-serif);
+
+  /* Radius — `rounded-base`. */
+  --radius-base: var(--radius, 0.5rem);
+
+  /* Shadow — `shadow-base`. */
+  --shadow-base: var(--shadow, none);
+}
+
+/*
+ * No :root declarations here — each var() above carries its own fallback so
+ * components rendered outside any <ThemeProvider> still resolve. Apps may
+ * provide their own :root defaults if they want a different fallback.
+ */

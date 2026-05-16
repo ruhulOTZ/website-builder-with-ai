@@ -1,0 +1,48 @@
+{
+  "domain": "dental_clinic",
+  "domainSpecifier": "pediatric",
+  "businessName": "Bloom Pediatric Dental, PLLC",
+  "oneLineDescription": "Bloom Pediatric Dental provides comprehensive, compassionate dental care for children aged 2-18 in West Asheville, focusing on comfort and evidence-based practices.",
+  "services": [
+    {
+      "name": "Routine preventive care",
+      "description": "Cleanings, exams, sealants, and fluoride treatments for children."
+    },
+    {
+      "name": "Restorative care",
+      "description": "Fillings and crowns to address dental issues."
+    },
+    {
+      "name": "Pediatric orthodontic screenings and referrals",
+      "description": "Screenings for orthodontic needs and coordination with local orthodontists for treatment."
+    },
+    {
+      "name": "Same-day emergency appointments",
+      "description": "Emergency dental care available Tuesday through Saturday."
+    },
+    {
+      "name": "Specialized care for neurodivergent children",
+      "description": "Accommodations including quiet rooms and weighted blankets available on request."
+    }
+  ],
+  "targetAudience": "Parents (predominantly mothers, 28–44) of children aged 2–12 in West Asheville and surrounding ZIP codes, and local pediatricians and family physicians making referrals.",
+  "uniqueSellingPoints": [
+    "longer appointment lengths (45-minute first visits as a standard)",
+    "continuity of hygienist assignments year-over-year",
+    "an evidence-based no-upsell policy on fluoride and sealants",
+    "accommodations for sensory-sensitive patients"
+  ],
+  "brandPersonality": ["warm", "plainspoken", "parental", "reassuring", "direct"],
+  "pricePoint": "mid",
+  "location": {
+    "city": "Asheville",
+    "region": "NC",
+    "country": "USA",
+    "isOnlineOnly": false
+  },
+  "contact": {
+    "email": "bloom@bloompediatric.com",
+    "phone": "(828) 555-0184",
+    "address": "412 Haywood Road, Asheville NC 28806"
+  }
+}

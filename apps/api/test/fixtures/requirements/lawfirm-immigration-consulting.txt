@@ -1,0 +1,17 @@
+Greene & Tova is a boutique immigration practice based in Toronto. We are a registered Ontario law firm (we are licensed by the Law Society of Ontario) but the work we do day to day is closer to immigration consulting than what most people think of as "lawyering."
+
+We handle Canadian work permits, permanent residence applications, citizenship, LMIA support for employers, and the occasional refugee claim. About 70% of our work is on the corporate side — helping mid-sized US and EU tech companies relocate their employees to Canada. The other 30% is direct-to-individual work, mostly people already in Canada on temporary visas who are trying to land permanent status.
+
+There are five of us. Two licensed lawyers (Avi Greene and Sarah Tova, the partners), two RCICs (Regulated Canadian Immigration Consultants), and an admin who keeps us honest. We share a floor on Spadina with a small accounting firm.
+
+We are not a "we'll do anything" immigration firm. We don't take refugee/asylum work as a primary practice. We don't do family sponsorship cases (we refer those out). We focus on skilled-worker and corporate mobility because that's where our experience is deepest.
+
+Our clients hire us because (a) the partners both worked in-house at a tech company before going into private practice, so we understand the employer side, (b) we publish a weekly newsletter on Canadian immigration policy changes that has 8,000 subscribers, and (c) we are honest about cases we won't win. We turn down maybe a quarter of inbounds because the case is weaker than the client realizes.
+
+Our voice is direct, plain English, no Latin. We've been told we sound more like a tech blog than a law firm. That's fine.
+
+We charge fixed fees, not hourly. Disclosed upfront. Standard PR application is CAD $4,500 inclusive of disbursements.
+
+Site needs: services overview, who we are, case studies (anonymized), the newsletter signup, intake form for prospective clients, contact. We're also adding a public "decisions tracker" page that summarizes recent IRCC decisions.
+
+Toronto office is at 401 Spadina Ave, Suite 600. Avi's email is avi@greenetova.ca.

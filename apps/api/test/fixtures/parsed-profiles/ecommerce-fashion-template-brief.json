@@ -1,0 +1,23 @@
+{
+  "domain": "ecommerce_fashion",
+  "businessName": "SaltHouse",
+  "tagline": "Made well, made once",
+  "oneLineDescription": "SaltHouse offers women's clothing, including knitwear, denim, and simple staples, with limited drops and a focus on quality craftsmanship.",
+  "services": [],
+  "targetAudience": "Women aged 28-45 in coastal cities like Boston, Portland ME, Portsmouth, and Mystic, with household incomes of $80k-$180k, who own investment pieces and read publications like The Cut and House Beautiful.",
+  "uniqueSellingPoints": [
+    "Limited drops, 4 per year",
+    "Knitwear is made by a small mill in Northern Ireland",
+    "Denim is selvedge, made in Japan",
+    "Founder is Eliza Brand — former buyer at Toast (the brand)",
+    "We do not run sales. Ever. Price is the price."
+  ],
+  "brandPersonality": ["direct", "concise", "factual", "unembellished"],
+  "pricePoint": "premium",
+  "location": {
+    "isOnlineOnly": true
+  },
+  "contact": {
+    "email": "hello@salthouse.co"
+  }
+}

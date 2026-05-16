@@ -1,0 +1,32 @@
+Strategic Communications Brief — North Yardley Engineering, Ltd.
+
+North Yardley Engineering is a UK-incorporated technology consultancy providing cloud architecture, DevOps, and platform engineering services to mid-market and enterprise clients. The firm was incorporated in 2014 and currently employs 47 consultants across offices in London, Manchester, and (newly opened) Dublin.
+
+The firm operates exclusively in the B2B segment. Engagements typically run 4–12 months and are structured as either fixed-scope advisory or staff-augmentation embeds. Average engagement value is £180,000.
+
+Target client profile:
+The firm serves UK and Irish technology companies between Series B and post-IPO scale (approximately 100–1,500 engineering headcount). Decision-makers reached at the engagement-formation stage are CTOs, VP Engineering, and Heads of Platform. The firm does not pursue government, defence, or financial services regulated work as a deliberate market positioning choice.
+
+Practice areas:
+1. Cloud migration (AWS, GCP, Azure — provider-agnostic by policy)
+2. Platform engineering and internal developer platform design
+3. Observability program design (SLO/SLA frameworks, error budgets, alerting hygiene)
+4. DevOps and CI/CD modernisation
+5. Cost optimisation and FinOps program design
+6. Capability uplift via embedded mentorship
+
+Differentiators (per the founding partners):
+- Operating-model-first methodology, not tools-first
+- Written handover documentation as a contractual deliverable on every engagement
+- All consultants are former practitioners with at least 7 years of in-house experience prior to consulting
+- The firm publishes a quarterly research letter ("Yardley Quarterly") covering one operational topic in depth
+- Member of the British Computer Society; founding partners are Chartered IT Professionals
+
+Voice and tone:
+The brand is positioned as the "quiet expert" — restrained, evidence-led, never claiming what cannot be backed by case study. Voice should avoid superlatives, avoid first-person plural enthusiasm, and never use exclamation marks. The firm has been described by a former client as "Stripe Press, but for consulting."
+
+Price positioning: Premium. The firm explicitly does not compete on price.
+
+Geographic markets: United Kingdom (primary), Republic of Ireland (secondary). No active expansion outside these jurisdictions.
+
+Contact for inbound: hello@northyardley.co.uk

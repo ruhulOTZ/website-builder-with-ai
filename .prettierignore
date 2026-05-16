@@ -1,0 +1,13 @@
+node_modules
+.next
+.turbo
+dist
+build
+coverage
+pnpm-lock.yaml
+**/generated
+**/.prisma
+*.min.js
+*.min.css
+# Eval-rig generated artifacts — JSON/HTML reports per run, not source.
+apps/api/test/eval-output

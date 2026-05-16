@@ -1,0 +1,43 @@
+{
+  "domain": "creative_agency",
+  "domainSpecifier": "brand identity, editorial design, packaging, motion design",
+  "businessName": "Quartermass Studio",
+  "oneLineDescription": "Quartermass Studio is a partner-led design studio delivering bespoke brand systems, editorial, packaging, and motion design with a selective, hands-on approach.",
+  "services": [
+    {
+      "name": "Brand Identity Design",
+      "description": "Creating comprehensive visual and strategic brand systems, distinct from simple logo deliverables."
+    },
+    {
+      "name": "Editorial Design",
+      "description": "Designing layouts and visual content for publications and print materials."
+    },
+    {
+      "name": "Packaging Design",
+      "description": "Developing aesthetic and functional packaging solutions for products."
+    },
+    {
+      "name": "Motion Design",
+      "description": "Producing animated graphics and visual effects for various media."
+    }
+  ],
+  "targetAudience": "Independent record labels, university presses, contemporary art galleries, and B2B SaaS companies.",
+  "uniqueSellingPoints": [
+    "One project at a time per designer",
+    "All work is partner-supervised",
+    "Fixed project fee, no hourly billing or scope creep invoices",
+    "Public process documentation for every project",
+    "Focus on comprehensive brand systems, not just logos",
+    "Partners directly execute the work, not juniors"
+  ],
+  "brandPersonality": ["dry", "arch", "direct", "selective", "unpretentious", "deliberate"],
+  "pricePoint": "premium",
+  "location": {
+    "city": "Glasgow",
+    "country": "United Kingdom",
+    "isOnlineOnly": false
+  },
+  "contact": {
+    "email": "hi@quartermass.studio"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "extends": "@repo/config/typescript/base.json",
+  "include": [],
+  "references": [
+    { "path": "./apps/web" },
+    { "path": "./apps/api" },
+    { "path": "./packages/shared-types" },
+    { "path": "./packages/database" },
+    { "path": "./packages/ai" },
+    { "path": "./packages/components-library" },
+    { "path": "./packages/design-system" }
+  ]
+}

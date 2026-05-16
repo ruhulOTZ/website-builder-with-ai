@@ -1,0 +1,49 @@
+{
+  "domain": "gym_fitness",
+  "domainSpecifier": "powerlifting and strongman gym",
+  "businessName": "Iron Halo",
+  "oneLineDescription": "Iron Halo is a dedicated powerlifting and strongman gym in Salford, Manchester, providing a focused, technically supervised environment for serious lifters.",
+  "services": [
+    {
+      "name": "Coached programming",
+      "description": "Every member is on a written program from one of our two coaches (IPF cat-2 and BWL level 3)."
+    },
+    {
+      "name": "Meet prep",
+      "description": "We run cycles into specific competitions, preparing lifters for national events."
+    },
+    {
+      "name": "Open floor membership",
+      "description": "Membership for serious independent lifters who want the specialized environment without coaching."
+    },
+    {
+      "name": "Strongman block",
+      "description": "Saturday strongman training sessions utilizing the loading bay, weather permitting."
+    },
+    {
+      "name": "Nutrition guidance",
+      "description": "Review of food logs upon request, not a full coaching service."
+    }
+  ],
+  "targetAudience": "Serious independent lifters, competitive powerlifters, and strongman competitors seeking a focused, technically supervised training environment.",
+  "uniqueSellingPoints": [
+    "No unnecessary machines, televisions, or corporate music.",
+    "Extensive specialized equipment including calibrated platforms, competition bars, strongman implements, and 4 tonnes of plates.",
+    "Focused, technically supervised environment for heavy lifting.",
+    "Mandatory coached programming for all members.",
+    "Strict focus on serious lifters, turning away those not aligned with the gym's ethos."
+  ],
+  "brandPersonality": ["direct", "technical", "dry", "dark-humored", "unfluffy"],
+  "pricePoint": "mid",
+  "location": {
+    "city": "Salford",
+    "region": "Manchester",
+    "country": "United Kingdom",
+    "isOnlineOnly": false
+  },
+  "contact": {
+    "email": "sam@ironhalo.co.uk",
+    "phone": "0161 555 0192",
+    "address": "12 Bridgewater Way"
+  }
+}

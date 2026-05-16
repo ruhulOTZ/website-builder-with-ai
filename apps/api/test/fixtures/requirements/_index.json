@@ -1,0 +1,75 @@
+{
+  "$comment": "Eval-rig manifest. Drives apps/api/scripts/eval-parse.ts. Hand-authored fixtures with explicit variety on domain, voice, detail level, and information gaps. AI-authored on 2026-05-15 — replace with human-written docs at any point.",
+  "fixtures": [
+    {
+      "file": "gym-powerlifting-detailed.txt",
+      "scenario": "Detailed founder-voice brief from a small powerlifting/strongman gym. Lowercase, casual, lots of specifics (member count, sponsored athletes, equipment list).",
+      "expectedDomain": "gym_fitness",
+      "expectedDomainSpecifierHint": "powerlifting and strongman gym",
+      "notable": "Domain is clear. Tests USP extraction (specific equipment counts, sponsorships), pricePoint inference from sparse signals, brandPersonality from casual founder voice."
+    },
+    {
+      "file": "dental-pediatric-agency-brief.txt",
+      "scenario": "Agency-prepared formal brief for a pediatric dental practice. Numbered sections, third-person voice, complete information.",
+      "expectedDomain": "dental_clinic",
+      "expectedDomainSpecifierHint": "pediatric",
+      "notable": "Clean baseline. Should not be hard for the parser. Tests: domainSpecifier extraction, pricePoint=mid (explicitly stated), specific targetAudience."
+    },
+    {
+      "file": "bakery-sparse-founder-voice.txt",
+      "scenario": "Two-sentence founder note. Just enough to identify the business. Missing most optional fields.",
+      "expectedDomain": "restaurant_cafe",
+      "expectedDomainSpecifierHint": "bakery",
+      "notable": "Sparse. Missing fields: tagline, contact email, phone, USPs, brandPersonality cues are minimal. Tests parser's ability to NOT invent missing data."
+    },
+    {
+      "file": "ecommerce-fashion-template-brief.txt",
+      "scenario": "Bulleted fill-in-the-blank style brief — has the structure of a marketing template. Explicit pricePoint, explicit USPs, explicit brand vibes.",
+      "expectedDomain": "ecommerce_fashion",
+      "expectedDomainSpecifierHint": null,
+      "notable": "All fields well-supplied. Tests verbatim USP extraction. brandPersonality should match the listed 'vibes' (quiet, unfussy, old-money-ish)."
+    },
+    {
+      "file": "it-consulting-detailed-formal.txt",
+      "scenario": "Long, formal brief for a UK technology consultancy. Very B2B. Detailed practice areas.",
+      "expectedDomain": "it_services",
+      "expectedDomainSpecifierHint": "cloud architecture and platform engineering consultancy",
+      "notable": "Tricky: could land in `it_services` or `consulting`. Either is defensible. Tests: long-document handling, pricePoint=premium (explicit), restrained voice extraction."
+    },
+    {
+      "file": "wellness-studio-ambiguous.txt",
+      "scenario": "Founder voice. Boutique fitness + wellness + cafe hybrid. The founder explicitly notes the category is hard to pin down.",
+      "expectedDomain": "yoga_wellness",
+      "expectedDomainSpecifierHint": "boutique fitness/wellness hybrid with IV therapy and cafe",
+      "notable": "DELIBERATELY AMBIGUOUS. Defensible answers: yoga_wellness, salon_spa, gym_fitness, other. Consistency matters more than the specific call. domainSpecifier should carry the nuance."
+    },
+    {
+      "file": "lawfirm-immigration-consulting.txt",
+      "scenario": "Boutique Toronto immigration practice. Self-describes as 'closer to consulting than lawyering' but is licensed as a law firm.",
+      "expectedDomain": "law_firm",
+      "expectedDomainSpecifierHint": "immigration law, corporate mobility focus",
+      "notable": "DELIBERATELY AMBIGUOUS. law_firm or consulting are both defensible. The fact that they are licensed as a law firm should anchor to law_firm in my read, but the parser may disagree."
+    },
+    {
+      "file": "tutoring-sparse-missing-fields.txt",
+      "scenario": "One-paragraph minimum-viable brief for an SAT/ACT tutoring service. Almost no information beyond domain + name.",
+      "expectedDomain": "education_tutoring",
+      "expectedDomainSpecifierHint": "test prep",
+      "notable": "EXTREMELY sparse. Missing: location, contact, audience specifics, USPs, brandPersonality cues, pricePoint signal. Strongest test of 'don't invent' rule."
+    },
+    {
+      "file": "realestate-buyer-agency-detailed.txt",
+      "scenario": "Founder phone-typed message. Specific, casual, full of business detail. Buyer-only real estate agency.",
+      "expectedDomain": "real_estate",
+      "expectedDomainSpecifierHint": "buyer's-only real estate agency",
+      "notable": "Tests USP extraction (the no-listings principle), targetAudience specificity (3 distinct buyer segments), pricePoint quirk (commission-based, no direct cost to buyer)."
+    },
+    {
+      "file": "design-studio-mixed-voice.txt",
+      "scenario": "Brief that mixes formal agency-prepared opening with founder-voice asides (including 'i wrote drunk at 1am' aside).",
+      "expectedDomain": "creative_agency",
+      "expectedDomainSpecifierHint": "independent brand-systems studio",
+      "notable": "Tests brandPersonality extraction from a deliberately-stated voice profile ('dry, slightly arch'). USPs are stated as 'studio principles'. pricePoint=premium (explicit £45k starting fee)."
+    }
+  ]
+}

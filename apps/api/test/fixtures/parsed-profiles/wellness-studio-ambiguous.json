@@ -1,0 +1,42 @@
+{
+  "domain": "yoga_wellness",
+  "domainSpecifier": "Hybrid boutique fitness and wellness studio",
+  "businessName": "Open Stand",
+  "oneLineDescription": "Open Stand is a hybrid boutique fitness and wellness studio offering barre and pilates classes, IV vitamin drips, an infrared sauna, and a low-key cafe.",
+  "services": [
+    {
+      "name": "Barre and Pilates classes",
+      "description": "Group fitness classes focusing on barre and pilates techniques."
+    },
+    {
+      "name": "IV vitamin drips",
+      "description": "Intravenous vitamin therapy administered by medical professionals."
+    },
+    {
+      "name": "Infrared sauna",
+      "description": "Access to a small infrared sauna for wellness benefits."
+    },
+    {
+      "name": "Cafe",
+      "description": "A publicly accessible cafe offering adaptogenic drinks and bone broth."
+    }
+  ],
+  "targetAudience": "Women in their 30s–40s in Bend who care about how they feel but are done with the SoulCycle-adjacent boutique cardio scene.",
+  "uniqueSellingPoints": [
+    "A unique hybrid of boutique fitness classes and comprehensive wellness services.",
+    "A dedicated 'third-place' for women in their 30s-40s in Bend.",
+    "A minimal, warm, ceramic-studio-feeling aesthetic with natural wood.",
+    "An alternative to the prevalent boutique cardio scene, focusing on holistic well-being."
+  ],
+  "brandPersonality": ["informal", "direct", "discerning", "warm", "minimalist", "honest"],
+  "pricePoint": "premium",
+  "location": {
+    "city": "Bend",
+    "region": "Oregon",
+    "isOnlineOnly": false
+  },
+  "contact": {
+    "email": "cassidy@openstand.studio",
+    "phone": "541-555-0290"
+  }
+}

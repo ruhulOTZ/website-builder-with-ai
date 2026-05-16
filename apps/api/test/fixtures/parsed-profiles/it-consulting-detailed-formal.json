@@ -1,0 +1,51 @@
+{
+  "domain": "it_services",
+  "domainSpecifier": "cloud architecture, DevOps, and platform engineering consultancy",
+  "businessName": "North Yardley Engineering, Ltd.",
+  "oneLineDescription": "North Yardley Engineering is a UK technology consultancy providing cloud architecture, DevOps, and platform engineering services to mid-market and enterprise clients.",
+  "services": [
+    {
+      "name": "Cloud migration",
+      "description": "Provider-agnostic migration services for AWS, GCP, and Azure."
+    },
+    {
+      "name": "Platform engineering and internal developer platform design",
+      "description": "Designing and implementing platform engineering and internal developer platforms."
+    },
+    {
+      "name": "Observability program design",
+      "description": "Designing SLO/SLA frameworks, error budgets, and alerting hygiene programs."
+    },
+    {
+      "name": "DevOps and CI/CD modernisation",
+      "description": "Modernising DevOps practices and Continuous Integration/Continuous Delivery pipelines."
+    },
+    {
+      "name": "Cost optimisation and FinOps program design",
+      "description": "Designing programs for cloud cost optimisation and FinOps."
+    },
+    {
+      "name": "Capability uplift",
+      "description": "Improving client team capabilities through embedded mentorship."
+    }
+  ],
+  "targetAudience": "UK and Irish technology companies between Series B and post-IPO scale (approximately 100–1,500 engineering headcount), with decision-makers being CTOs, VP Engineering, and Heads of Platform.",
+  "uniqueSellingPoints": [
+    "Operating-model-first methodology, not tools-first",
+    "Written handover documentation as a contractual deliverable on every engagement",
+    "All consultants are former practitioners with at least 7 years of in-house experience prior to consulting",
+    "The firm publishes a quarterly research letter (\"Yardley Quarterly\") covering one operational topic in depth",
+    "Member of the British Computer Society; founding partners are Chartered IT Professionals"
+  ],
+  "brandPersonality": ["restrained", "evidence-led", "expert", "professional", "direct"],
+  "pricePoint": "premium",
+  "location": {
+    "city": "London",
+    "region": "UK",
+    "country": "United Kingdom",
+    "isOnlineOnly": false
+  },
+  "contact": {
+    "email": "hello@northyardley.co.uk"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "domain": "real_estate",
+  "domainSpecifier": "buyer's agency",
+  "businessName": "Cardinal Hill",
+  "oneLineDescription": "Cardinal Hill is an exclusive buyer's agency in Charlottesville, Virginia, solely representing homebuyers to avoid conflicts of interest inherent in traditional real estate.",
+  "services": [
+    {
+      "name": "Buyer Representation",
+      "description": "Guiding clients through the entire home buying process with unwavering loyalty and expertise."
+    },
+    {
+      "name": "Relocation Assistance",
+      "description": "Providing comprehensive resources and personalized guidance for individuals and families relocating to the Charlottesville area."
+    },
+    {
+      "name": "Home Inspection Walkthroughs",
+      "description": "Conducting detailed, three-hour home inspection walkthroughs to ensure clients are fully informed about their potential purchase."
+    }
+  ],
+  "targetAudience": "People relocating into Charlottesville from out of state (UVA faculty, NGIC, NRO, DC-area expats), first-time buyers in the under-$400k range, and empty nesters downsizing from Albemarle county.",
+  "uniqueSellingPoints": [
+    "Exclusive buyer representation, avoiding conflicts of interest with sellers.",
+    "All agents are certified ABRs (Accredited Buyer's Representatives).",
+    "Deep local market expertise in Charlottesville since 2011.",
+    "Thorough, three-hour home inspection walkthroughs for informed decisions.",
+    "Data-driven insights and quarterly market reports for clients.",
+    "Specialized support for relocating professionals, first-time buyers, and downsizers."
+  ],
+  "brandPersonality": ["warm", "calm", "nerdy", "data-driven", "thorough", "direct"],
+  "pricePoint": "mid",
+  "location": {
+    "city": "Charlottesville",
+    "region": "Virginia",
+    "isOnlineOnly": false
+  },
+  "contact": {
+    "email": "jen@cardinalhill.com",
+    "phone": "434-555-0918",
+    "address": "200 East Main"
+  }
+}

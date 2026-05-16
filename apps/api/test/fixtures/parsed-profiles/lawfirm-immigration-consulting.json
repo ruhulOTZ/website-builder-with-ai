@@ -1,0 +1,50 @@
+{
+  "domain": "law_firm",
+  "domainSpecifier": "immigration",
+  "businessName": "Greene & Tova",
+  "oneLineDescription": "Greene & Tova is a boutique Toronto-based immigration law firm specializing in Canadian work permits, permanent residence, citizenship, and LMIA support for employers.",
+  "services": [
+    {
+      "name": "Canadian Work Permits",
+      "description": "Assisting individuals and employers with obtaining Canadian work permits."
+    },
+    {
+      "name": "Permanent Residence Applications",
+      "description": "Guiding individuals through the process of applying for Canadian permanent residence."
+    },
+    {
+      "name": "Citizenship Applications",
+      "description": "Supporting clients with their applications for Canadian citizenship."
+    },
+    {
+      "name": "LMIA Support for Employers",
+      "description": "Providing Labour Market Impact Assessment (LMIA) support for employers hiring foreign workers."
+    },
+    {
+      "name": "Corporate Mobility Consulting",
+      "description": "Facilitating the relocation of employees to Canada for mid-sized US and EU tech companies."
+    },
+    {
+      "name": "Individual Permanent Status Applications",
+      "description": "Assisting individuals already in Canada on temporary visas to achieve permanent resident status."
+    }
+  ],
+  "targetAudience": "Mid-sized US and EU tech companies relocating employees to Canada, and individuals in Canada on temporary visas seeking permanent status.",
+  "uniqueSellingPoints": [
+    "Partners' in-house tech company experience provides employer-side understanding.",
+    "Weekly newsletter on Canadian immigration policy with 8,000 subscribers.",
+    "Honest assessment of case viability, turning down weak cases."
+  ],
+  "brandPersonality": ["direct", "plain", "unpretentious", "modern"],
+  "pricePoint": "mid",
+  "location": {
+    "city": "Toronto",
+    "region": "Ontario",
+    "country": "Canada",
+    "isOnlineOnly": false
+  },
+  "contact": {
+    "email": "avi@greenetova.ca",
+    "address": "401 Spadina Ave, Suite 600"
+  }
+}

@@ -1,0 +1,79 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// Persisted output of the BusinessProfileParserService.
+/// The `profileJson` column is a validated BusinessProfile (Zod-checked
+/// before insert by the parser pipeline). Raw input is retained for audit
+/// and prompt iteration.
+model BusinessProfileRecord {
+  id            String   @id @default(cuid())
+  rawText       String
+  sourceLabel   String?
+  profileJson   Json
+  modelUsed     String
+  promptVersion String
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  // Optional user link — wired in a later auth phase.
+  userId        String?
+
+  @@map("business_profile_records")
+}
+
+/// A user-owned builder project. Created in Phase 2.4 to give the builder UI
+/// a persistent surface independent of the per-stage records below.
+/// `businessProfileId` traces the historical BusinessProfileRecord (audit);
+/// `businessProfileJson` is the live editable copy the user mutates. 2.4c
+/// will add `designBriefId` + `designBriefJson` with the same pattern.
+model Project {
+  id                  String        @id @default(cuid())
+  userId              String // Clerk user ID once auth lands in Phase 2.5; dev stub until then.
+  name                String
+  status              ProjectStatus @default(DRAFT)
+  rawRequirements     String?       @db.Text // null until the user pastes their doc
+  businessProfileId   String? // loose-string FK to BusinessProfileRecord.id; tighten in Phase 2.4d
+  businessProfileJson Json? // denormalized editable BusinessProfile; null until parse runs
+  designBriefId       String? // loose-string FK to DesignBriefRecord.id
+  designBriefJson     Json? // denormalized editable DesignBrief; null until generation runs
+  createdAt           DateTime      @default(now())
+  updatedAt           DateTime      @updatedAt
+
+  @@index([userId])
+  @@map("projects")
+}
+
+enum ProjectStatus {
+  DRAFT
+  REQUIREMENTS_SUBMITTED
+  PROFILE_GENERATED
+  PROFILE_CONFIRMED
+  BRIEF_GENERATED
+  BRIEF_CONFIRMED
+  COMPLETED
+}
+
+/// Persisted output of the DesignBriefGeneratorService.
+/// The `briefJson` column is a validated DesignBrief (Zod-checked before
+/// insert by the generator pipeline).
+model DesignBriefRecord {
+  id                String   @id @default(cuid())
+  // businessProfileId: kept as loose string for now to allow brief generation
+  // without requiring profile persistence. Tighten to a real relation in
+  // Phase 2.4 when the builder UI lands.
+  businessProfileId String?
+  briefJson         Json
+  modelUsed         String
+  promptVersion     String
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  // Optional user link — wired in a later auth phase.
+  userId            String?
+
+  @@map("design_brief_records")
+}

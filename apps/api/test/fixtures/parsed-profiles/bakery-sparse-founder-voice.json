@@ -1,0 +1,16 @@
+{
+  "domain": "restaurant_cafe",
+  "domainSpecifier": "bakery",
+  "businessName": "Hearth",
+  "oneLineDescription": "Hearth is a small, partner-run bakery in Burlington, Vermont, offering a focused selection of fresh baked goods.",
+  "services": [],
+  "targetAudience": "Customers of a small bakery in Burlington, Vermont.",
+  "uniqueSellingPoints": ["Hand-crafted by partners", "Focused menu of artisanal baked goods"],
+  "brandPersonality": ["direct", "unpretentious", "simple", "focused", "practical"],
+  "pricePoint": "mid",
+  "location": {
+    "city": "Burlington",
+    "region": "Vermont",
+    "isOnlineOnly": false
+  }
+}

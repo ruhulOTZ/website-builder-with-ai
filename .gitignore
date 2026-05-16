@@ -1,0 +1,49 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build outputs
+dist
+build
+.next
+.turbo
+out
+*.tsbuildinfo
+
+# Generated
+**/generated
+**/.prisma
+
+# Environment
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.idea
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json.example
+
+# Test / coverage
+coverage
+.nyc_output
+
+# Eval-rig generated artifacts and the response caches.
+apps/api/test/eval-output
+apps/api/test/eval-output/.cache/
+apps/api/test/eval-output/.cache-brief/
+
+# Misc
+*.tgz
+.cache

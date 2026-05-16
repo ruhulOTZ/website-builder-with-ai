@@ -1,0 +1,16 @@
+{
+  "domain": "education_tutoring",
+  "domainSpecifier": "test prep",
+  "businessName": "Catalyst Test Prep",
+  "oneLineDescription": "We provide SAT and ACT tutoring for high school students, primarily through one-on-one sessions.",
+  "services": [
+    {
+      "name": "SAT and ACT Tutoring",
+      "description": "One-on-one tutoring for high school students preparing for the SAT and ACT exams."
+    }
+  ],
+  "targetAudience": "High schoolers preparing for the SAT and ACT.",
+  "uniqueSellingPoints": ["Tutoring provided by former teachers", "Mostly one-on-one sessions"],
+  "brandPersonality": ["direct", "factual", "unpolished", "straightforward"],
+  "pricePoint": "mid"
+}
