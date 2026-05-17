@@ -22,7 +22,8 @@ import {
   HomePageGenerationSchema,
   type HomePageGenerationOutput,
 } from './generation-schemas/home-page-v1';
-import { resolveImageRefs } from './image-resolution';
+import { type ImageResolver, resolveImageRefs } from './image-resolution';
+import { IMAGE_RESOLVER } from './image-resolver.tokens';
 import { buildHomePagePrompt, PROMPT_VERSION } from './prompts/home-page-v1';
 
 const MODEL = 'gemini-2.5-flash';
@@ -76,7 +77,10 @@ export class HomePageGeneratorService {
   readonly model: string = MODEL;
   readonly promptVersion: string = PROMPT_VERSION;
 
-  constructor(@Inject(AI_PROVIDER) private readonly ai: AIProvider) {}
+  constructor(
+    @Inject(AI_PROVIDER) private readonly ai: AIProvider,
+    @Inject(IMAGE_RESOLVER) private readonly imageResolver: ImageResolver,
+  ) {}
 
   async generate(input: GenerateInput): Promise<GenerateResult> {
     const { system, user } = buildHomePagePrompt({
@@ -153,12 +157,15 @@ export class HomePageGeneratorService {
     // and the eval rig tags it `phase: 'post-injection-validation'`.
     const validated: Site = SiteSchema.parse(siteInput);
 
-    // Post-AI enrichment: populate ImageRef.url from query strings via
-    // Unsplash Source API. Pure function — no network call at this point;
-    // the URL is a redirect that resolves at render time in the browser.
-    // Runs after SiteSchema.parse so all fields are typed; no re-validation
-    // needed (we only add strings to existing optional url fields).
-    const withImages: Site = resolveImageRefs(validated);
+    // Post-AI enrichment: populate ImageRef.url from query strings via the
+    // injected resolver. In production the resolver hits the Unsplash API
+    // (api.unsplash.com/search/photos); when no key is configured the
+    // resolver is a no-op and URLs stay undefined. Failures are non-fatal —
+    // the resolver returns undefined and the renderer falls back to the
+    // placeholder scrim. Runs after SiteSchema.parse so all fields are
+    // typed; no re-validation needed (we only add strings to existing
+    // optional url fields).
+    const withImages: Site = await resolveImageRefs(validated, this.imageResolver);
 
     return {
       site: normalizeStrings(withImages),
