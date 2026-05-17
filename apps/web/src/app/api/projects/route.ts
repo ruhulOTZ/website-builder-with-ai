@@ -33,9 +33,19 @@ export async function POST(request: Request): Promise<NextResponse> {
       { status: 400 },
     );
   }
+  // When the caller supplies requirements at create time, advance status to
+  // REQUIREMENTS_SUBMITTED in the same write. Powers the one-shot "describe
+  // your website → generate everything" flow used by /projects/new.
+  const requirements = parsed.data.rawRequirements;
   const project = await prisma.project.create({
-    data: { userId, name: parsed.data.name },
-    select: { id: true },
+    data: {
+      userId,
+      name: parsed.data.name,
+      ...(requirements !== undefined
+        ? { rawRequirements: requirements, status: 'REQUIREMENTS_SUBMITTED' as const }
+        : {}),
+    },
+    select: { id: true, status: true },
   });
   return NextResponse.json(project, { status: 201 });
 }

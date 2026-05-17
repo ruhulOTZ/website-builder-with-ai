@@ -12,6 +12,10 @@ const REQUIREMENTS_MAX = 50_000;
 
 export const CreateProjectSchema = z.object({
   name: z.string().trim().min(NAME_MIN).max(NAME_MAX),
+  // Optional at create time. When provided, the route handler also stamps
+  // status = REQUIREMENTS_SUBMITTED so the fast-path "describe your website
+  // → generate" flow can skip the separate paste-requirements step.
+  rawRequirements: z.string().trim().min(REQUIREMENTS_MIN).max(REQUIREMENTS_MAX).optional(),
 });
 
 export const PatchProjectSchema = z
