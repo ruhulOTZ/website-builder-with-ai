@@ -32,7 +32,7 @@ const STATUS_RANK: Record<ProjectStatus, number> = {
 const STEPS = [
   { key: 'profile', label: 'Understanding your business', completeAtRank: 3 },
   { key: 'brief', label: 'Designing the brief', completeAtRank: 5 },
-  { key: 'site', label: 'Building your home page', completeAtRank: 6 },
+  { key: 'site', label: 'Building your website', completeAtRank: 6 },
 ] as const;
 
 type StepKey = (typeof STEPS)[number]['key'];

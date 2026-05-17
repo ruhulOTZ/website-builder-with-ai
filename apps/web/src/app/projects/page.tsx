@@ -1,5 +1,5 @@
 import { prisma } from '@repo/database';
-import { CheckCircle2, ExternalLink, Sparkles } from 'lucide-react';
+import { CheckCircle2, Sparkles } from 'lucide-react';
 import Link from 'next/link';
 
 import { DeleteRowButton, RefreshButton } from './row-actions';
@@ -160,9 +160,6 @@ export default async function ProjectsPage() {
                 <TableHead className="text-muted-foreground text-xs uppercase tracking-wider">
                   Project
                 </TableHead>
-                <TableHead className="text-muted-foreground w-16 text-xs uppercase tracking-wider">
-                  Site
-                </TableHead>
                 <TableHead className="text-muted-foreground text-xs uppercase tracking-wider">
                   Status
                 </TableHead>
@@ -197,23 +194,6 @@ export default async function ProjectsPage() {
                       >
                         {project.name}
                       </Link>
-                    </TableCell>
-
-                    {/* Site (icon-only external link to the rendered site) */}
-                    <TableCell>
-                      {project.generatedSiteId !== null ? (
-                        <Link
-                          href={`/render/${project.generatedSiteId}`}
-                          target="_blank"
-                          rel="noopener"
-                          className="text-muted-foreground hover:text-foreground inline-flex"
-                          aria-label="Open rendered site in a new tab"
-                        >
-                          <ExternalLink className="size-4" aria-hidden="true" />
-                        </Link>
-                      ) : (
-                        <span className="text-muted-foreground/50">—</span>
-                      )}
                     </TableCell>
 
                     {/* Status badge — uses existing variant ladder */}
